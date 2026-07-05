@@ -1,0 +1,33 @@
+# Secrets
+config/.env
+config/gcp_service_account.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated data — Delta tables, checkpoints, raw/processed outputs
+data/
+!data/sample/
+!data/sample/.gitkeep
+
+# Spark / Hadoop local artifacts
+run_log.txt
+spark-warehouse/
+metastore_db/
+derby.log
+
+# ML models (generated, not source)
+*.pkl
+analytics/anomaly_model.pkl
+
+# Airflow local runtime
+orchestration/airflow/logs/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
