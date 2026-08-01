@@ -1,707 +1,0 @@
-Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
-Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
-:: loading settings :: url = jar:file:/C:/Users/hp/Downloads/spark-3.5.8-bin-hadoop3/spark-3.5.8-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
-Ivy Default Cache set to: C:\Users\hp\.ivy2\cache
-The jars for the packages stored in: C:\Users\hp\.ivy2\jars
-org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
-io.delta#delta-spark_2.12 added as a dependency
-:: resolving dependencies :: org.apache.spark#spark-submit-parent-3e46d7aa-3eaa-4897-8839-2b0ded84efd4;1.0
-	confs: [default]
-	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
-	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
-	found org.apache.kafka#kafka-clients;3.4.1 in central
-	found org.lz4#lz4-java;1.8.0 in central
-	found org.xerial.snappy#snappy-java;1.1.10.3 in central
-	found org.slf4j#slf4j-api;2.0.7 in central
-	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
-	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
-	found commons-logging#commons-logging;1.1.3 in local-m2-cache
-	found com.google.code.findbugs#jsr305;3.0.0 in central
-	found org.apache.commons#commons-pool2;2.11.1 in central
-	found io.delta#delta-spark_2.12;3.2.0 in central
-	found io.delta#delta-storage;3.2.0 in central
-	found org.antlr#antlr4-runtime;4.9.3 in central
-:: resolution report :: resolve 485ms :: artifacts dl 168ms
-	:: modules in use:
-	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
-	commons-logging#commons-logging;1.1.3 from local-m2-cache in [default]
-	io.delta#delta-spark_2.12;3.2.0 from central in [default]
-	io.delta#delta-storage;3.2.0 from central in [default]
-	org.antlr#antlr4-runtime;4.9.3 from central in [default]
-	org.apache.commons#commons-pool2;2.11.1 from central in [default]
-	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
-	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
-	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
-	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
-	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
-	org.lz4#lz4-java;1.8.0 from central in [default]
-	org.slf4j#slf4j-api;2.0.7 from central in [default]
-	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
-	---------------------------------------------------------------------
-	|                  |            modules            ||   artifacts   |
-	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
-	---------------------------------------------------------------------
-	|      default     |   14  |   0   |   0   |   0   ||   14  |   0   |
-	---------------------------------------------------------------------
-:: retrieving :: org.apache.spark#spark-submit-parent-3e46d7aa-3eaa-4897-8839-2b0ded84efd4
-	confs: [default]
-	0 artifacts copied, 14 already retrieved (0kB/50ms)
-Setting default log level to "WARN".
-To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-26/07/05 16:50:05 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
-26/07/05 16:50:06 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
-26/07/05 16:50:07 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
-26/07/05 16:50:07 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
-26/07/05 16:50:07 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
-26/07/05 16:50:07 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
-26/07/05 16:50:08 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
-[Stage 0:>                                                          (0 + 0) / 3][Stage 0:>                                                          (0 + 1) / 3][Stage 0:>    (0 + 3) / 3][Stage 1:>    (0 + 3) / 3][Stage 2:>    (0 + 3) / 3][Stage 0:>    (0 + 3) / 3][Stage 1:===> (2 + 1) / 3][Stage 2:>    (0 + 3) / 3]                                                                                26/07/05 16:50:33 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
-[Stage 6:>                  (0 + 1) / 1][Stage 9:>                  (0 + 1) / 1][Stage 6:>                                                          (0 + 1) / 1][Stage 13:>                                                       (0 + 12) / 50][Stage 10:>                (0 + 0) / 50][Stage 13:>               (0 + 12) / 50][Stage 7:>   (0 + 0) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (0 + 12) / 50][Stage 7:>   (0 + 2) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (0 + 12) / 50][Stage 7:>   (0 + 7) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:>  (7 + 5) / 50][Stage 7:>  (0 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:>  (1 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:>  (5 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:> (12 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:> (18 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:> (20 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:=>(25 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:=>(32 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:=>(36 + 12) / 50][Stage 10:>  (0 + 0) / 50][Stage 13:> (12 + 0) / 50][Stage 7:=>(39 + 11) / 50][Stage 10:>  (0 + 1) / 50][Stage 13:> (12 + 0) / 50][Stage 7:==>(45 + 5) / 50][Stage 10:>  (0 + 7) / 50][Stage 13:> (12 + 0) / 50][Stage 7:==>(48 + 2) / 50][Stage 10:> (0 + 10) / 50][Stage 13:> (12 + 0) / 50][Stage 10:>               (0 + 12) / 50][Stage 13:===>            (12 + 0) / 50][Stage 10:=>              (5 + 11) / 50][Stage 13:===>            (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:>(12 + 11) / 50][Stage 13:> (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:>(22 + 11) / 50][Stage 13:> (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:>(26 + 11) / 50][Stage 13:> (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:>(33 + 11) / 50][Stage 13:> (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:>(34 + 11) / 50][Stage 13:> (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:>(36 + 11) / 50][Stage 13:> (12 + 0) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:=>(43 + 7) / 50][Stage 13:> (12 + 4) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:=>(46 + 4) / 50][Stage 13:> (12 + 7) / 50][Stage 8:>    (0 + 1) / 1][Stage 10:=>(49 + 1) / 50][Stage 13:>(15 + 11) / 50][Stage 8:>                  (0 + 1) / 1][Stage 13:====>          (15 + 11) / 50][Stage 8:>                  (0 + 1) / 1][Stage 13:=====>         (19 + 10) / 50][Stage 8:>    (0 + 1) / 1][Stage 11:>   (0 + 1) / 1][Stage 13:>(26 + 10) / 50]                                                                                [Stage 11:>                 (0 + 1) / 1][Stage 13:===========>   (37 + 11) / 50][Stage 11:>                 (0 + 1) / 1][Stage 13:============>  (40 + 10) / 50][Stage 11:>                                                         (0 + 1) / 1]                                                                                [Stage 28:==>                                                     (2 + 10) / 50][Stage 22:> (0 + 11) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (11 + 1) / 50][Stage 22:> (2 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:> (6 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:>(13 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:>(18 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:>(20 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:>(29 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:>(30 + 12) / 50][Stage 25:>  (0 + 0) / 50][Stage 28:> (12 + 0) / 50][Stage 22:>(40 + 10) / 50][Stage 25:>  (0 + 2) / 50][Stage 28:> (12 + 0) / 50][Stage 22:=>(44 + 6) / 50][Stage 25:>  (0 + 6) / 50][Stage 28:> (12 + 0) / 50][Stage 25:>               (1 + 12) / 50][Stage 28:===>            (12 + 0) / 50][Stage 25:==>             (8 + 11) / 50][Stage 28:===>            (12 + 0) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:>(12 + 11) / 50][Stage 28:> (12 + 0) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:>(15 + 11) / 50][Stage 28:> (12 + 0) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:>(25 + 11) / 50][Stage 28:> (12 + 0) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:>(29 + 11) / 50][Stage 28:> (12 + 0) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:>(36 + 11) / 50][Stage 28:> (12 + 0) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:=>(41 + 9) / 50][Stage 28:> (12 + 2) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:=>(45 + 5) / 50][Stage 28:> (12 + 6) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:=>(47 + 3) / 50][Stage 28:> (12 + 8) / 50][Stage 23:>   (0 + 1) / 1][Stage 25:=>(49 + 1) / 50][Stage 28:>(13 + 10) / 50][Stage 23:>                 (0 + 1) / 1][Stage 28:===>           (13 + 11) / 50]                                                                                [Stage 26:>                 (0 + 1) / 1][Stage 28:======>        (23 + 11) / 50][Stage 26:>                 (0 + 1) / 1][Stage 28:========>      (29 + 11) / 50][Stage 26:>                 (0 + 1) / 1][Stage 28:=========>     (30 + 11) / 50][Stage 26:>                 (0 + 1) / 1][Stage 28:==========>    (36 + 11) / 50][Stage 26:>                 (0 + 1) / 1][Stage 28:=============>  (41 + 9) / 50][Stage 26:>                 (0 + 1) / 1][Stage 28:==============> (45 + 5) / 50][Stage 26:>                                                         (0 + 1) / 1]                                                                                [Stage 30:>                 (0 + 3) / 3][Stage 31:>                 (0 + 3) / 3]                                                                                [Stage 37:>               (0 + 12) / 50][Stage 40:===>            (11 + 0) / 50][Stage 37:> (7 + 12) / 50][Stage 40:> (11 + 0) / 50][Stage 43:>  (0 + 0) / 50][Stage 37:>(14 + 12) / 50][Stage 40:> (11 + 0) / 50][Stage 43:>  (0 + 0) / 50][Stage 37:>(23 + 13) / 50][Stage 40:> (11 + 0) / 50][Stage 43:>  (0 + 0) / 50][Stage 37:>(26 + 12) / 50][Stage 40:> (11 + 0) / 50][Stage 43:>  (0 + 0) / 50][Stage 37:>(35 + 12) / 50][Stage 40:> (11 + 0) / 50][Stage 43:>  (0 + 0) / 50][Stage 37:=>(42 + 8) / 50][Stage 40:> (11 + 4) / 50][Stage 43:>  (0 + 0) / 50][Stage 40:===>           (12 + 12) / 50][Stage 43:>                (0 + 0) / 50][Stage 40:====>          (14 + 11) / 50][Stage 43:>                (0 + 0) / 50][Stage 40:=======>       (24 + 11) / 50][Stage 43:>                (0 + 0) / 50][Stage 38:>   (0 + 1) / 1][Stage 40:>(33 + 11) / 50][Stage 43:>  (0 + 0) / 50][Stage 38:>   (0 + 1) / 1][Stage 40:=>(42 + 8) / 50][Stage 43:>  (0 + 3) / 50][Stage 38:>   (0 + 1) / 1][Stage 40:=>(47 + 3) / 50][Stage 43:>  (0 + 8) / 50][Stage 38:>                 (0 + 1) / 1][Stage 43:==>             (7 + 10) / 50][Stage 38:>                 (0 + 1) / 1][Stage 43:===>           (13 + 10) / 50][Stage 38:>   (0 + 1) / 1][Stage 41:>   (0 + 1) / 1][Stage 43:>(21 + 10) / 50]                                                                                [Stage 41:>                 (0 + 1) / 1][Stage 43:===========>   (37 + 11) / 50][Stage 41:>                 (0 + 1) / 1][Stage 43:==============> (46 + 4) / 50][Stage 41:>                 (0 + 1) / 1][Stage 45:======>           (1 + 2) / 3]                                                                                [Stage 54:===========================================>              (3 + 1) / 4][Stage 52:==>                                                     (2 + 12) / 50][Stage 52:============>                                          (11 + 12) / 50][Stage 52:====>          (16 + 12) / 50][Stage 55:>                (0 + 0) / 50][Stage 52:======>        (23 + 12) / 50][Stage 55:>                (0 + 0) / 50][Stage 52:=========>     (30 + 12) / 50][Stage 55:>                (0 + 0) / 50][Stage 52:=========>     (31 + 12) / 50][Stage 55:>                (0 + 0) / 50][Stage 52:==========>    (36 + 12) / 50][Stage 55:>                (0 + 0) / 50][Stage 52:=============>  (42 + 8) / 50][Stage 55:>                (0 + 4) / 50][Stage 52:==============> (46 + 4) / 50][Stage 55:>                (0 + 8) / 50][Stage 55:==>                                                     (2 + 11) / 50][Stage 55:=====>                                                  (5 + 11) / 50][Stage 55:==========>                                             (9 + 11) / 50][Stage 53:>   (0 + 1) / 1][Stage 55:>(17 + 11) / 50][Stage 57:>   (0 + 0) / 4][Stage 53:>   (0 + 1) / 1][Stage 55:>(25 + 11) / 50][Stage 57:>   (0 + 0) / 4][Stage 53:>   (0 + 1) / 1][Stage 55:>(30 + 11) / 50][Stage 57:>   (0 + 0) / 4][Stage 53:>   (0 + 1) / 1][Stage 55:>(34 + 11) / 50][Stage 57:>   (0 + 0) / 4][Stage 53:>   (0 + 1) / 1][Stage 55:=>(42 + 8) / 50][Stage 57:>   (0 + 3) / 4][Stage 53:>                 (0 + 1) / 1][Stage 57:=============>    (3 + 1) / 4]                                                                                [Stage 56:>                 (0 + 1) / 1][Stage 58:=>              (6 + 11) / 50][Stage 56:>   (0 + 1) / 1][Stage 58:> (9 + 11) / 50][Stage 60:>   (0 + 0) / 3][Stage 56:>   (0 + 1) / 1][Stage 58:>(11 + 11) / 50][Stage 60:>   (0 + 0) / 3][Stage 56:>   (0 + 1) / 1][Stage 58:>(16 + 11) / 50][Stage 60:>   (0 + 0) / 3][Stage 56:>   (0 + 1) / 1][Stage 58:>(22 + 11) / 50][Stage 60:>   (0 + 0) / 3][Stage 56:>   (0 + 1) / 1][Stage 58:>(26 + 11) / 50][Stage 60:>   (0 + 0) / 3]                                                                                [Stage 58:==========>    (34 + 12) / 50][Stage 60:>                 (0 + 0) / 3][Stage 58:=============>  (43 + 7) / 50][Stage 60:>                 (0 + 3) / 3][Stage 58:===============>(47 + 3) / 50][Stage 60:>                 (0 + 3) / 3][Stage 60:>                                                         (0 + 3) / 3][Stage 59:>                 (0 + 1) / 1][Stage 60:>                 (0 + 3) / 3][Stage 59:>   (0 + 1) / 1][Stage 60:>   (0 + 3) / 3][Stage 61:>   (0 + 3) / 3]                                                                                [Stage 60:>                 (0 + 3) / 3][Stage 61:>                 (0 + 3) / 3][Stage 60:>   (0 + 3) / 3][Stage 61:>   (0 + 3) / 3][Stage 62:>   (0 + 3) / 3]                                                                                [Stage 72:==================================>                       (3 + 2) / 5][Stage 72:==============================================>           (4 + 1) / 5][Stage 67:===>           (10 + 12) / 50][Stage 70:>                (0 + 0) / 50][Stage 67:====>          (16 + 12) / 50][Stage 70:>                (0 + 0) / 50][Stage 67:>(22 + 12) / 50][Stage 70:>  (0 + 0) / 50][Stage 73:>  (0 + 0) / 50][Stage 67:>(30 + 12) / 50][Stage 70:>  (0 + 0) / 50][Stage 73:>  (0 + 0) / 50][Stage 67:>(35 + 12) / 50][Stage 70:>  (0 + 0) / 50][Stage 73:>  (0 + 0) / 50][Stage 67:=>(45 + 5) / 50][Stage 70:>  (0 + 7) / 50][Stage 73:>  (0 + 0) / 50][Stage 67:=>(45 + 5) / 50][Stage 70:>  (0 + 8) / 50][Stage 73:>  (0 + 0) / 50][Stage 70:>               (2 + 12) / 50][Stage 73:>                (0 + 0) / 50][Stage 70:=>              (4 + 11) / 50][Stage 73:>                (0 + 0) / 50][Stage 70:===>           (10 + 11) / 50][Stage 73:>                (0 + 0) / 50][Stage 68:>   (0 + 1) / 1][Stage 70:>(17 + 11) / 50][Stage 73:>  (0 + 0) / 50][Stage 68:>   (0 + 1) / 1][Stage 70:>(25 + 11) / 50][Stage 73:>  (0 + 0) / 50][Stage 68:>   (0 + 1) / 1][Stage 70:>(28 + 11) / 50][Stage 73:>  (0 + 0) / 50][Stage 68:>   (0 + 1) / 1][Stage 70:>(34 + 11) / 50][Stage 73:>  (0 + 0) / 50][Stage 68:>   (0 + 1) / 1][Stage 70:=>(43 + 7) / 50][Stage 73:>  (0 + 4) / 50][Stage 68:>                 (0 + 1) / 1][Stage 73:>               (1 + 11) / 50][Stage 68:>                 (0 + 1) / 1][Stage 73:==>             (8 + 10) / 50]                                                                                [Stage 71:>                 (0 + 1) / 1][Stage 73:=======>       (26 + 11) / 50][Stage 71:>                 (0 + 1) / 1][Stage 73:==========>    (34 + 11) / 50][Stage 71:>                 (0 + 1) / 1][Stage 73:===========>   (39 + 11) / 50][Stage 71:>                                                         (0 + 1) / 1]                                                                                [Stage 75:============>     (2 + 1) / 3][Stage 76:>                 (0 + 3) / 3]                                                                                [Stage 87:================================================>         (5 + 1) / 6][Stage 82:==>             (9 + 12) / 50][Stage 85:>                (0 + 0) / 50][Stage 82:=====>          (16 + 5) / 50][Stage 85:>                (0 + 0) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:> (0 + 12) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:>(10 + 12) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:>(13 + 12) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:>(16 + 12) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:>(24 + 12) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:>(31 + 12) / 50][Stage 82:> (21 + 0) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:>(36 + 12) / 50][Stage 82:> (21 + 6) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:=>(44 + 6) / 50][Stage 82:>(21 + 11) / 50][Stage 85:>  (0 + 0) / 50][Stage 88:=>(49 + 1) / 50][Stage 82:=========>     (30 + 11) / 50][Stage 85:>                (0 + 0) / 50][Stage 82:===========>   (39 + 11) / 50][Stage 85:>                (0 + 0) / 50][Stage 82:=>(44 + 6) / 50][Stage 85:>  (0 + 5) / 50][Stage 89:>   (0 + 1) / 1][Stage 85:>               (3 + 10) / 50][Stage 89:>                 (0 + 1) / 1][Stage 85:===>           (12 + 10) / 50][Stage 89:>                 (0 + 1) / 1][Stage 83:>   (0 + 1) / 1][Stage 85:>(21 + 10) / 50][Stage 89:>   (0 + 1) / 1][Stage 83:>   (0 + 1) / 1][Stage 85:>(23 + 10) / 50][Stage 89:>   (0 + 1) / 1]                                                                                [Stage 97:==========>                                             (9 + 12) / 50][Stage 97:===========>                                           (10 + 12) / 50][Stage 97:>(20 + 12) / 50][Stage 100:> (0 + 0) / 50][Stage 102:>  (0 + 0) / 7][Stage 97:>(24 + 12) / 50][Stage 100:> (0 + 0) / 50][Stage 102:>  (0 + 0) / 7][Stage 97:>(34 + 12) / 50][Stage 100:> (0 + 0) / 50][Stage 102:>  (0 + 0) / 7][Stage 97:>(36 + 12) / 50][Stage 100:> (0 + 0) / 50][Stage 102:>  (0 + 0) / 7][Stage 97:=>(46 + 4) / 50][Stage 100:> (0 + 8) / 50][Stage 102:>  (0 + 0) / 7][Stage 100:=>             (5 + 11) / 50][Stage 102:>                (0 + 0) / 7][Stage 100:===>          (13 + 11) / 50][Stage 102:>                (0 + 0) / 7][Stage 98:>   (0 + 1) / 1][Stage 100:(15 + 11) / 50][Stage 102:>  (0 + 0) / 7][Stage 98:>   (0 + 1) / 1][Stage 100:(26 + 11) / 50][Stage 102:>  (0 + 0) / 7][Stage 98:>   (0 + 1) / 1][Stage 100:(33 + 11) / 50][Stage 102:>  (0 + 0) / 7][Stage 98:>   (0 + 1) / 1][Stage 100:>(42 + 8) / 50][Stage 102:>  (0 + 3) / 7][Stage 98:>   (0 + 1) / 1][Stage 100:>(45 + 5) / 50][Stage 102:>  (0 + 6) / 7][Stage 98:>                                                         (0 + 1) / 1]                                                                                [Stage 101:>                (0 + 1) / 1][Stage 103:===>          (11 + 11) / 50][Stage 101:>                (0 + 1) / 1][Stage 103:====>         (15 + 11) / 50][Stage 101:>                (0 + 1) / 1][Stage 103:====>         (16 + 11) / 50][Stage 101:>  (0 + 1) / 1][Stage 103:(32 + 11) / 50][Stage 105:>  (0 + 0) / 3]                                                                                [Stage 103:=============> (46 + 4) / 50][Stage 105:>                (0 + 3) / 3]                                                                                [Stage 104:>                (0 + 1) / 1][Stage 106:>                (0 + 3) / 3][Stage 104:>                (0 + 1) / 1][Stage 106:===========>     (2 + 1) / 3]                                                                                [Stage 114:=================================================>       (7 + 1) / 8][Stage 112:>              (2 + 11) / 50][Stage 114:==============>  (7 + 1) / 8][Stage 112:=======>                                               (7 + 12) / 50][Stage 112:============>                                         (12 + 12) / 50][Stage 112:=====================>                                (20 + 12) / 50][Stage 112:=======>      (27 + 12) / 50][Stage 115:>               (0 + 0) / 50][Stage 112:========>     (31 + 12) / 50][Stage 115:>               (0 + 0) / 50][Stage 112:=========>    (34 + 13) / 50][Stage 115:>               (0 + 0) / 50][Stage 112:=============> (44 + 6) / 50][Stage 115:>               (0 + 6) / 50][Stage 112:==============>(49 + 1) / 50][Stage 115:>              (1 + 11) / 50][Stage 115:>              (3 + 12) / 50][Stage 117:>                (0 + 0) / 8][Stage 115:=>             (6 + 11) / 50][Stage 117:>                (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(14 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(17 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(24 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(27 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(33 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(34 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:(36 + 11) / 50][Stage 117:>  (0 + 0) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:>(42 + 8) / 50][Stage 117:>  (0 + 3) / 8][Stage 113:>  (0 + 1) / 1][Stage 115:>(47 + 3) / 50][Stage 117:>  (0 + 8) / 8][Stage 113:>                (0 + 1) / 1][Stage 117:======>          (3 + 5) / 8][Stage 113:>                                                        (0 + 1) / 1]                                                                                [Stage 116:>                (0 + 1) / 1][Stage 118:=>             (5 + 11) / 50][Stage 116:>                (0 + 1) / 1][Stage 118:==>            (7 + 11) / 50][Stage 116:>                (0 + 1) / 1][Stage 118:==>           (10 + 11) / 50][Stage 116:>                (0 + 1) / 1][Stage 118:===>          (14 + 11) / 50][Stage 116:>  (0 + 1) / 1][Stage 118:(21 + 11) / 50][Stage 120:>  (0 + 0) / 3][Stage 116:>  (0 + 1) / 1][Stage 118:(26 + 11) / 50][Stage 120:>  (0 + 0) / 3][Stage 116:>  (0 + 1) / 1][Stage 118:(33 + 11) / 50][Stage 120:>  (0 + 0) / 3][Stage 116:>  (0 + 1) / 1][Stage 118:(36 + 11) / 50][Stage 120:>  (0 + 0) / 3]                                                                                [Stage 129:==================================================>      (8 + 1) / 9][Stage 127:=============================================>         (41 + 9) / 50][Stage 132:>                                                        (0 + 0) / 9][Stage 130:======>       (22 + 11) / 50][Stage 132:>                (0 + 0) / 9][Stage 128:>  (0 + 1) / 1][Stage 130:(30 + 11) / 50][Stage 132:>  (0 + 0) / 9][Stage 128:>  (0 + 1) / 1][Stage 130:>(44 + 6) / 50][Stage 132:>  (0 + 6) / 9]                                                                                26/07/05 16:52:24 ERROR DeltaFileFormatWriter: Aborting job 6308f31e-d300-4c6b-87ef-d12f7ab5289f.
-java.lang.IllegalStateException: SparkContext has been shutdown
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2385)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.$anonfun$executeWrite$1(DeltaFileFormatWriter.scala:263)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.writeAndCommit(DeltaFileFormatWriter.scala:295)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.executeWrite(DeltaFileFormatWriter.scala:234)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.write(DeltaFileFormatWriter.scala:214)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.$anonfun$writeFiles$1(TransactionalWrite.scala:440)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles(TransactionalWrite.scala:398)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles$(TransactionalWrite.scala:371)
-	at org.apache.spark.sql.delta.OptimisticTransaction.writeFiles(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles(TransactionalWrite.scala:246)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles$(TransactionalWrite.scala:242)
-	at org.apache.spark.sql.delta.OptimisticTransaction.writeFiles(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles(TransactionalWrite.scala:235)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles$(TransactionalWrite.scala:232)
-	at org.apache.spark.sql.delta.OptimisticTransaction.writeFiles(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.sources.DeltaSink.$anonfun$addBatchWithStatusImpl$4(DeltaSink.scala:139)
-	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:552)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:139)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
-	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
-26/07/05 16:52:24 ERROR MicroBatchExecution: Query [id = 27d54717-abaf-4f29-a584-3d9b4b335443, runId = 4217d0f2-c369-4aba-a83c-e1e00508a32d] terminated with error
-java.lang.IllegalStateException: SparkContext has been shutdown
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2385)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.$anonfun$executeWrite$1(DeltaFileFormatWriter.scala:263)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.writeAndCommit(DeltaFileFormatWriter.scala:295)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.executeWrite(DeltaFileFormatWriter.scala:234)
-	at org.apache.spark.sql.delta.files.DeltaFileFormatWriter$.write(DeltaFileFormatWriter.scala:214)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.$anonfun$writeFiles$1(TransactionalWrite.scala:440)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles(TransactionalWrite.scala:398)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles$(TransactionalWrite.scala:371)
-	at org.apache.spark.sql.delta.OptimisticTransaction.writeFiles(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles(TransactionalWrite.scala:246)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles$(TransactionalWrite.scala:242)
-	at org.apache.spark.sql.delta.OptimisticTransaction.writeFiles(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles(TransactionalWrite.scala:235)
-	at org.apache.spark.sql.delta.files.TransactionalWrite.writeFiles$(TransactionalWrite.scala:232)
-	at org.apache.spark.sql.delta.OptimisticTransaction.writeFiles(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.sources.DeltaSink.$anonfun$addBatchWithStatusImpl$4(DeltaSink.scala:139)
-	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:552)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:139)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
-	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
-26/07/05 16:52:25 ERROR MicroBatchExecution: Query [id = 302b7252-6902-488d-b0ee-b275663b79ba, runId = 138542b5-fb6a-4119-8513-4c3c7144038c] terminated with error
-java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
-This stopped SparkContext was created at:
-
-org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
-java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
-java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
-py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
-py4j.Gateway.invoke(Gateway.java:238)
-py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
-py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
-py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-java.base/java.lang.Thread.run(Thread.java:1583)
-
-The currently active SparkContext was created at:
-
-org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
-java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
-java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
-py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
-py4j.Gateway.invoke(Gateway.java:238)
-py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
-py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
-py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-java.base/java.lang.Thread.run(Thread.java:1583)
-         
-	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
-	at org.apache.spark.SparkContext.broadcastInternal(SparkContext.scala:1654)
-	at org.apache.spark.SparkContext.broadcast(SparkContext.scala:1639)
-	at org.apache.spark.sql.execution.datasources.json.JsonFileFormat.buildReader(JsonFileFormat.scala:99)
-	at org.apache.spark.sql.execution.datasources.FileFormat.buildReaderWithPartitionValues(FileFormat.scala:138)
-	at org.apache.spark.sql.execution.datasources.FileFormat.buildReaderWithPartitionValues$(FileFormat.scala:129)
-	at org.apache.spark.sql.execution.datasources.TextBasedFileFormat.buildReaderWithPartitionValues(FileFormat.scala:346)
-	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD$lzycompute(DataSourceScanExec.scala:548)
-	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD(DataSourceScanExec.scala:537)
-	at org.apache.spark.sql.execution.FileSourceScanExec.doExecute(DataSourceScanExec.scala:575)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
-	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
-	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
-	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
-	at org.apache.spark.sql.execution.InputAdapter.inputRDD(WholeStageCodegenExec.scala:527)
-	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs(WholeStageCodegenExec.scala:455)
-	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs$(WholeStageCodegenExec.scala:454)
-	at org.apache.spark.sql.execution.InputAdapter.inputRDDs(WholeStageCodegenExec.scala:498)
-	at org.apache.spark.sql.execution.FilterExec.inputRDDs(basicPhysicalOperators.scala:242)
-	at org.apache.spark.sql.execution.ProjectExec.inputRDDs(basicPhysicalOperators.scala:51)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:751)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
-	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
-	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
-	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
-	at org.apache.spark.sql.execution.SparkPlan.getByteArrayRdd(SparkPlan.scala:364)
-	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:445)
-	at org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:4333)
-	at org.apache.spark.sql.Dataset.$anonfun$collect$1(Dataset.scala:3575)
-	at org.apache.spark.sql.Dataset.$anonfun$withAction$2(Dataset.scala:4323)
-	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
-	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:4321)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:4321)
-	at org.apache.spark.sql.Dataset.collect(Dataset.scala:3575)
-	at org.apache.spark.sql.delta.Snapshot.protocolMetadataAndICTReconstruction(Snapshot.scala:309)
-	at org.apache.spark.sql.delta.Snapshot._reconstructedProtocolMetadataAndICT$lzycompute(Snapshot.scala:203)
-	at org.apache.spark.sql.delta.Snapshot._reconstructedProtocolMetadataAndICT(Snapshot.scala:196)
-	at org.apache.spark.sql.delta.Snapshot.metadata(Snapshot.scala:278)
-	at org.apache.spark.sql.delta.managedcommit.CommitOwnerProvider$.getTableCommitOwner(CommitOwnerClient.scala:212)
-	at org.apache.spark.sql.delta.Snapshot.initializeTableCommitOwner(Snapshot.scala:237)
-	at org.apache.spark.sql.delta.Snapshot.<init>(Snapshot.scala:235)
-	at org.apache.spark.sql.delta.SnapshotManagement.$anonfun$createSnapshot$2(SnapshotManagement.scala:634)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotFromGivenOrEquivalentLogSegment(SnapshotManagement.scala:796)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotFromGivenOrEquivalentLogSegment$(SnapshotManagement.scala:782)
-	at org.apache.spark.sql.delta.DeltaLog.createSnapshotFromGivenOrEquivalentLogSegment(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshot(SnapshotManagement.scala:627)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshot$(SnapshotManagement.scala:618)
-	at org.apache.spark.sql.delta.DeltaLog.createSnapshot(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotAfterCommit(SnapshotManagement.scala:1107)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotAfterCommit$(SnapshotManagement.scala:1098)
-	at org.apache.spark.sql.delta.DeltaLog.createSnapshotAfterCommit(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.$anonfun$updateAfterCommit$2(SnapshotManagement.scala:1151)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
-	at org.apache.spark.sql.delta.DeltaLog.recordFrameProfile(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.$anonfun$recordDeltaOperationInternal$1(DeltaLogging.scala:136)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation(DatabricksLogging.scala:128)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation$(DatabricksLogging.scala:117)
-	at org.apache.spark.sql.delta.DeltaLog.recordOperation(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperationInternal(DeltaLogging.scala:135)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation(DeltaLogging.scala:125)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation$(DeltaLogging.scala:115)
-	at org.apache.spark.sql.delta.DeltaLog.recordDeltaOperation(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.$anonfun$updateAfterCommit$1(SnapshotManagement.scala:1125)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly(SnapshotManagement.scala:78)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly$(SnapshotManagement.scala:75)
-	at org.apache.spark.sql.delta.DeltaLog.withSnapshotLockInterruptibly(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.updateAfterCommit(SnapshotManagement.scala:1125)
-	at org.apache.spark.sql.delta.SnapshotManagement.updateAfterCommit$(SnapshotManagement.scala:1120)
-	at org.apache.spark.sql.delta.DeltaLog.updateAfterCommit(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommit(OptimisticTransaction.scala:1941)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommit$(OptimisticTransaction.scala:1902)
-	at org.apache.spark.sql.delta.OptimisticTransaction.doCommit(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$doCommitRetryIteratively$3(OptimisticTransaction.scala:1848)
-	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$doCommitRetryIteratively$2(OptimisticTransaction.scala:1845)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordFrameProfile(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.$anonfun$recordDeltaOperationInternal$1(DeltaLogging.scala:136)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation(DatabricksLogging.scala:128)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation$(DatabricksLogging.scala:117)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperationInternal(DeltaLogging.scala:135)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation(DeltaLogging.scala:125)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation$(DeltaLogging.scala:115)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordDeltaOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$doCommitRetryIteratively$1(OptimisticTransaction.scala:1845)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly(SnapshotManagement.scala:78)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly$(SnapshotManagement.scala:75)
-	at org.apache.spark.sql.delta.DeltaLog.withSnapshotLockInterruptibly(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.lockCommitIfEnabled(OptimisticTransaction.scala:1815)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommitRetryIteratively(OptimisticTransaction.scala:1833)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommitRetryIteratively$(OptimisticTransaction.scala:1829)
-	at org.apache.spark.sql.delta.OptimisticTransaction.doCommitRetryIteratively(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.liftedTree1$1(OptimisticTransaction.scala:1168)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$commitImpl$1(OptimisticTransaction.scala:1080)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordFrameProfile(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.$anonfun$recordDeltaOperationInternal$1(DeltaLogging.scala:136)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation(DatabricksLogging.scala:128)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation$(DatabricksLogging.scala:117)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperationInternal(DeltaLogging.scala:135)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation(DeltaLogging.scala:125)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation$(DeltaLogging.scala:115)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordDeltaOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commitImpl(OptimisticTransaction.scala:1077)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commitImpl$(OptimisticTransaction.scala:1072)
-	at org.apache.spark.sql.delta.OptimisticTransaction.commitImpl(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commit(OptimisticTransaction.scala:1048)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commit$(OptimisticTransaction.scala:1045)
-	at org.apache.spark.sql.delta.OptimisticTransaction.commit(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.sources.DeltaSink$PendingTxn.$anonfun$commit$1(DeltaSink.scala:86)
-	at scala.runtime.java8.JFunction0$mcJ$sp.apply(JFunction0$mcJ$sp.java:23)
-	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:552)
-	at org.apache.spark.sql.delta.sources.DeltaSink$PendingTxn.commit(DeltaSink.scala:85)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:150)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
-	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
-ERROR:root:Exception while sending command.
-Traceback (most recent call last):
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
-    answer = smart_decode(self.stream.readline()[:-1])
-                          ^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: reentrant call inside <_io.BufferedReader name=940>
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
-    response = connection.send_command(command)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
-    raise Py4JNetworkError(
-py4j.protocol.Py4JNetworkError: Error while sending or receiving
-ERROR:root:Exception while sending command.
-Traceback (most recent call last):
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
-    answer = smart_decode(self.stream.readline()[:-1])
-                          ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
-    return self._sock.recv_into(b)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\context.py", line 381, in signal_handler
-    self.cancelAllJobs()
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\context.py", line 2446, in cancelAllJobs
-    self._jsc.sc().cancelAllJobs()
-    ^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1322, in __call__
-    return_value = get_return_value(
-                   ^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 179, in deco
-    return f(*a, **kw)
-           ^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\protocol.py", line 334, in get_return_value
-    raise Py4JError(
-py4j.protocol.Py4JError: An error occurred while calling o24.sc
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
-    response = connection.send_command(command)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
-    raise Py4JNetworkError(
-py4j.protocol.Py4JNetworkError: Error while sending or receiving
-Settlement streaming started. Bronze / Silver / DLQ writers running.
-Silver path: file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/silver_settlements
-Press Ctrl+C to stop.
-Traceback (most recent call last):
-  File "C:\Users\hp\projects\payment-ops-intelligence\streaming\settlement_stream.py", line 118, in <module>
-    spark.streams.awaitAnyTermination()
-26/07/05 16:52:25 ERROR MicroBatchExecution: Query [id = 77eb025a-4822-4dd3-b0b3-53ae6b623ce1, runId = 923afa81-fd4d-440a-9c8f-fcad68ca6c1e] terminated with error
-java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
-This stopped SparkContext was created at:
-
-org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
-java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
-java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
-py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
-py4j.Gateway.invoke(Gateway.java:238)
-py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
-py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
-py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-java.base/java.lang.Thread.run(Thread.java:1583)
-
-The currently active SparkContext was created at:
-
-org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
-java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
-java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
-py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
-py4j.Gateway.invoke(Gateway.java:238)
-py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
-py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
-py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-java.base/java.lang.Thread.run(Thread.java:1583)
-         
-	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
-	at org.apache.spark.SparkContext.broadcastInternal(SparkContext.scala:1654)
-	at org.apache.spark.SparkContext.broadcast(SparkContext.scala:1639)
-	at org.apache.spark.sql.execution.datasources.json.JsonFileFormat.buildReader(JsonFileFormat.scala:99)
-	at org.apache.spark.sql.execution.datasources.FileFormat.buildReaderWithPartitionValues(FileFormat.scala:138)
-	at org.apache.spark.sql.execution.datasources.FileFormat.buildReaderWithPartitionValues$(FileFormat.scala:129)
-	at org.apache.spark.sql.execution.datasources.TextBasedFileFormat.buildReaderWithPartitionValues(FileFormat.scala:346)
-	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD$lzycompute(DataSourceScanExec.scala:548)
-	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD(DataSourceScanExec.scala:537)
-	at org.apache.spark.sql.execution.FileSourceScanExec.doExecute(DataSourceScanExec.scala:575)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
-	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
-	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
-	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
-	at org.apache.spark.sql.execution.InputAdapter.inputRDD(WholeStageCodegenExec.scala:527)
-	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs(WholeStageCodegenExec.scala:455)
-	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs$(WholeStageCodegenExec.scala:454)
-	at org.apache.spark.sql.execution.InputAdapter.inputRDDs(WholeStageCodegenExec.scala:498)
-	at org.apache.spark.sql.execution.FilterExec.inputRDDs(basicPhysicalOperators.scala:242)
-	at org.apache.spark.sql.execution.ProjectExec.inputRDDs(basicPhysicalOperators.scala:51)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:751)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
-	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
-	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
-	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
-	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
-	at org.apache.spark.sql.execution.SparkPlan.getByteArrayRdd(SparkPlan.scala:364)
-	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:445)
-	at org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:4333)
-	at org.apache.spark.sql.Dataset.$anonfun$collect$1(Dataset.scala:3575)
-	at org.apache.spark.sql.Dataset.$anonfun$withAction$2(Dataset.scala:4323)
-	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
-	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:4321)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:4321)
-	at org.apache.spark.sql.Dataset.collect(Dataset.scala:3575)
-	at org.apache.spark.sql.delta.Snapshot.protocolMetadataAndICTReconstruction(Snapshot.scala:309)
-	at org.apache.spark.sql.delta.Snapshot._reconstructedProtocolMetadataAndICT$lzycompute(Snapshot.scala:203)
-	at org.apache.spark.sql.delta.Snapshot._reconstructedProtocolMetadataAndICT(Snapshot.scala:196)
-	at org.apache.spark.sql.delta.Snapshot.metadata(Snapshot.scala:278)
-	at org.apache.spark.sql.delta.managedcommit.CommitOwnerProvider$.getTableCommitOwner(CommitOwnerClient.scala:212)
-	at org.apache.spark.sql.delta.Snapshot.initializeTableCommitOwner(Snapshot.scala:237)
-	at org.apache.spark.sql.delta.Snapshot.<init>(Snapshot.scala:235)
-	at org.apache.spark.sql.delta.SnapshotManagement.$anonfun$createSnapshot$2(SnapshotManagement.scala:634)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotFromGivenOrEquivalentLogSegment(SnapshotManagement.scala:796)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotFromGivenOrEquivalentLogSegment$(SnapshotManagement.scala:782)
-	at org.apache.spark.sql.delta.DeltaLog.createSnapshotFromGivenOrEquivalentLogSegment(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshot(SnapshotManagement.scala:627)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshot$(SnapshotManagement.scala:618)
-	at org.apache.spark.sql.delta.DeltaLog.createSnapshot(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotAfterCommit(SnapshotManagement.scala:1107)
-	at org.apache.spark.sql.delta.SnapshotManagement.createSnapshotAfterCommit$(SnapshotManagement.scala:1098)
-	at org.apache.spark.sql.delta.DeltaLog.createSnapshotAfterCommit(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.$anonfun$updateAfterCommit$2(SnapshotManagement.scala:1151)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
-	at org.apache.spark.sql.delta.DeltaLog.recordFrameProfile(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.$anonfun$recordDeltaOperationInternal$1(DeltaLogging.scala:136)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation(DatabricksLogging.scala:128)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation$(DatabricksLogging.scala:117)
-	at org.apache.spark.sql.delta.DeltaLog.recordOperation(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperationInternal(DeltaLogging.scala:135)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation(DeltaLogging.scala:125)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation$(DeltaLogging.scala:115)
-	at org.apache.spark.sql.delta.DeltaLog.recordDeltaOperation(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.$anonfun$updateAfterCommit$1(SnapshotManagement.scala:1125)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly(SnapshotManagement.scala:78)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly$(SnapshotManagement.scala:75)
-	at org.apache.spark.sql.delta.DeltaLog.withSnapshotLockInterruptibly(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.SnapshotManagement.updateAfterCommit(SnapshotManagement.scala:1125)
-	at org.apache.spark.sql.delta.SnapshotManagement.updateAfterCommit$(SnapshotManagement.scala:1120)
-	at org.apache.spark.sql.delta.DeltaLog.updateAfterCommit(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommit(OptimisticTransaction.scala:1941)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommit$(OptimisticTransaction.scala:1902)
-	at org.apache.spark.sql.delta.OptimisticTransaction.doCommit(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$doCommitRetryIteratively$3(OptimisticTransaction.scala:1848)
-	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$doCommitRetryIteratively$2(OptimisticTransaction.scala:1845)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordFrameProfile(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.$anonfun$recordDeltaOperationInternal$1(DeltaLogging.scala:136)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation(DatabricksLogging.scala:128)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation$(DatabricksLogging.scala:117)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperationInternal(DeltaLogging.scala:135)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation(DeltaLogging.scala:125)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation$(DeltaLogging.scala:115)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordDeltaOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$doCommitRetryIteratively$1(OptimisticTransaction.scala:1845)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly(SnapshotManagement.scala:78)
-	at org.apache.spark.sql.delta.SnapshotManagement.withSnapshotLockInterruptibly$(SnapshotManagement.scala:75)
-	at org.apache.spark.sql.delta.DeltaLog.withSnapshotLockInterruptibly(DeltaLog.scala:74)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.lockCommitIfEnabled(OptimisticTransaction.scala:1815)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommitRetryIteratively(OptimisticTransaction.scala:1833)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.doCommitRetryIteratively$(OptimisticTransaction.scala:1829)
-	at org.apache.spark.sql.delta.OptimisticTransaction.doCommitRetryIteratively(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.liftedTree1$1(OptimisticTransaction.scala:1168)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.$anonfun$commitImpl$1(OptimisticTransaction.scala:1080)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordFrameProfile(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.$anonfun$recordDeltaOperationInternal$1(DeltaLogging.scala:136)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation(DatabricksLogging.scala:128)
-	at com.databricks.spark.util.DatabricksLogging.recordOperation$(DatabricksLogging.scala:117)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperationInternal(DeltaLogging.scala:135)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation(DeltaLogging.scala:125)
-	at org.apache.spark.sql.delta.metering.DeltaLogging.recordDeltaOperation$(DeltaLogging.scala:115)
-	at org.apache.spark.sql.delta.OptimisticTransaction.recordDeltaOperation(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commitImpl(OptimisticTransaction.scala:1077)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commitImpl$(OptimisticTransaction.scala:1072)
-	at org.apache.spark.sql.delta.OptimisticTransaction.commitImpl(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commit(OptimisticTransaction.scala:1048)
-	at org.apache.spark.sql.delta.OptimisticTransactionImpl.commit$(OptimisticTransaction.scala:1045)
-	at org.apache.spark.sql.delta.OptimisticTransaction.commit(OptimisticTransaction.scala:147)
-	at org.apache.spark.sql.delta.sources.DeltaSink$PendingTxn.$anonfun$commit$1(DeltaSink.scala:86)
-	at scala.runtime.java8.JFunction0$mcJ$sp.apply(JFunction0$mcJ$sp.java:23)
-	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:552)
-	at org.apache.spark.sql.delta.sources.DeltaSink$PendingTxn.commit(DeltaSink.scala:85)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:150)
-	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
-	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
-	at org.apache.spark.sql.execution.streaming  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\sql\streaming\query.py", line 596, in awaitAnyTermination
-.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
-	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
-	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
-	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
-	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
-    return self._jsqm.awaitAnyTermination()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1322, in __call__
-    return_value = get_return_value(
-                   ^^^^^^^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 179, in deco
-    return f(*a, **kw)
-           ^^^^^^^^^^^
-  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\protocol.py", line 334, in get_return_value
-    raise Py4JError(
-py4j.protocol.Py4JError: An error occurred while calling o93.awaitAnyTermination
-26/07/05 16:52:25 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\hp\AppData\Local\Temp\spark-efb07992-f7bc-437a-9e7d-31d65c900b2c\userFiles-807ed0e9-7be7-45dd-9ddb-4403536dbd0a
-java.io.IOException: Failed to delete: C:\Users\hp\AppData\Local\Temp\spark-efb07992-f7bc-437a-9e7d-31d65c900b2c\userFiles-807ed0e9-7be7-45dd-9ddb-4403536dbd0a\org.xerial.snappy_snappy-java-1.1.10.3.jar
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
-	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
-	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
-	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
-	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:108)
-	at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2305)
-	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
-	at org.apache.spark.SparkContext.stop(SparkContext.scala:2305)
-	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
-	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
-	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at scala.util.Try$.apply(Try.scala:213)
-	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
-	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-26/07/05 16:52:25 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\hp\AppData\Local\Temp\spark-efb07992-f7bc-437a-9e7d-31d65c900b2c\userFiles-807ed0e9-7be7-45dd-9ddb-4403536dbd0a
-java.io.IOException: Failed to delete: C:\Users\hp\AppData\Local\Temp\spark-efb07992-f7bc-437a-9e7d-31d65c900b2c\userFiles-807ed0e9-7be7-45dd-9ddb-4403536dbd0a\org.xerial.snappy_snappy-java-1.1.10.3.jar
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
-	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
-	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
-	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
-	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
-	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
-	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
-	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
-	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
-	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at scala.util.Try$.apply(Try.scala:213)
-	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
-	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-26/07/05 16:52:25 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\hp\AppData\Local\Temp\spark-efb07992-f7bc-437a-9e7d-31d65c900b2c
-java.io.IOException: Failed to delete: C:\Users\hp\AppData\Local\Temp\spark-efb07992-f7bc-437a-9e7d-31d65c900b2c\userFiles-807ed0e9-7be7-45dd-9ddb-4403536dbd0a\org.xerial.snappy_snappy-java-1.1.10.3.jar
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
-	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
-	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
-	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
-	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
-	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
-	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
-	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
-	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
-	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at scala.util.Try$.apply(Try.scala:213)
-	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
-	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-SUCCESS: The process with PID 8940 (child process of PID 21884) has been terminated.
-SUCCESS: The process with PID 21884 (child process of PID 7384) has been terminated.
-SUCCESS: The process with PID 7384 (child process of PID 21560) has been terminated.
