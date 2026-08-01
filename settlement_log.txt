@@ -1,0 +1,935 @@
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+:: loading settings :: url = jar:file:/C:/Users/hp/Downloads/spark-3.5.8-bin-hadoop3/spark-3.5.8-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: C:\Users\hp\.ivy2\cache
+The jars for the packages stored in: C:\Users\hp\.ivy2\jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+io.delta#delta-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-62ba4a5a-4f6d-4fca-ba50-7536f63508db;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in local-m2-cache
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+	found io.delta#delta-spark_2.12;3.2.0 in central
+	found io.delta#delta-storage;3.2.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+:: resolution report :: resolve 648ms :: artifacts dl 259ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from local-m2-cache in [default]
+	io.delta#delta-spark_2.12;3.2.0 from central in [default]
+	io.delta#delta-storage;3.2.0 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   14  |   0   |   0   |   0   ||   14  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-62ba4a5a-4f6d-4fca-ba50-7536f63508db
+	confs: [default]
+	0 artifacts copied, 14 already retrieved (0kB/174ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/07/05 16:52:57 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
+[Stage 0:>                                                          (0 + 9) / 9]                                                                                26/07/05 16:53:03 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/07/05 16:53:03 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/07/05 16:53:04 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/07/05 16:53:05 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 6:=====>            (3 + 7) / 10][Stage 9:>                 (0 + 5) / 10][Stage 4:>  (0 + 12) / 50][Stage 7:>   (0 + 0) / 50][Stage 10:>  (0 + 0) / 50][Stage 4:> (12 + 12) / 50][Stage 7:>   (0 + 0) / 50][Stage 10:>  (0 + 0) / 50][Stage 4:=>(25 + 12) / 50][Stage 7:>   (0 + 0) / 50][Stage 10:>  (0 + 0) / 50][Stage 4:=>(37 + 13) / 50][Stage 7:>   (0 + 0) / 50][Stage 10:>  (0 + 0) / 50][Stage 7:=>               (5 + 11) / 50][Stage 10:>                (0 + 0) / 50][Stage 7:=====>          (18 + 11) / 50][Stage 10:>                (0 + 0) / 50][Stage 5:>    (0 + 1) / 1][Stage 7:=>(30 + 11) / 50][Stage 10:>  (0 + 0) / 50]                                                                                [Stage 10:===========================>                           (25 + 11) / 50][Stage 8:>                  (0 + 1) / 1][Stage 10:==========>    (35 + 11) / 50]                                                                                26/07/05 16:53:11 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/07/05 16:53:11 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[Stage 12:>                                                         (0 + 3) / 3][Stage 12:>                 (0 + 3) / 3][Stage 13:============>     (2 + 1) / 3][Stage 12:>   (0 + 3) / 3][Stage 13:====(3 + 0) / 3][Stage 14:>   (0 + 3) / 3]                                                                                26/07/05 16:53:15 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[Stage 19:=============================>                         (27 + 12) / 50][Stage 19:========================================>              (37 + 13) / 50][Stage 22:==>                                                     (2 + 12) / 50][Stage 22:==================>                                    (17 + 11) / 50][Stage 22:===================================>                   (32 + 11) / 50]                                                                                [Stage 26:>                 (0 + 1) / 1][Stage 29:>                 (0 + 1) / 1]                                                                                [Stage 36:======================================>                (35 + 12) / 50]                                                                                [Stage 45:>                 (0 + 1) / 1][Stage 49:===========>   (39 + 11) / 50]                                                                                26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@2e6da0be rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 11, active threads = 10, queued tasks = 0, completed tasks = 819]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@541a4081 rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 8, active threads = 8, queued tasks = 0, completed tasks = 821]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@5b36a89e rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 8, active threads = 8, queued tasks = 0, completed tasks = 821]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@2f362341 rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 8, active threads = 8, queued tasks = 0, completed tasks = 821]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@3e2019aa rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 7, active threads = 7, queued tasks = 0, completed tasks = 822]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@2cbe1c00 rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 6, active threads = 6, queued tasks = 0, completed tasks = 823]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[Stage 58:=======================================>               (36 + 12) / 50]26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@30e53db1 rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 5, active threads = 5, queued tasks = 0, completed tasks = 824]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR Inbox: Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@1dd9b562 rejected from java.util.concurrent.ThreadPoolExecutor@2e38445f[Shutting down, pool size = 4, active threads = 4, queued tasks = 0, completed tasks = 825]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:364)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:74)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:26 ERROR MicroBatchExecution: Query [id = 27d54717-abaf-4f29-a584-3d9b4b335443, runId = dff8f5d8-d36a-40db-b44b-4a9c8769eb3c] terminated with error
+org.apache.spark.SparkException: Job 33 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1259)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1257)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1257)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:3129)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$stop$3(DAGScheduler.scala:3015)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:3015)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2258)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2258)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:995)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2393)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2414)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2433)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2458)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1049)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:410)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1048)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:448)
+	at org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:4333)
+	at org.apache.spark.sql.Dataset.$anonfun$head$1(Dataset.scala:3316)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$2(Dataset.scala:4323)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:4321)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:4321)
+	at org.apache.spark.sql.Dataset.head(Dataset.scala:3316)
+	at org.apache.spark.sql.Dataset.head(Dataset.scala:3323)
+	at org.apache.spark.sql.Dataset.first(Dataset.scala:3330)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$extractComputedState$1(SnapshotState.scala:130)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.extractComputedState(SnapshotState.scala:127)
+	at org.apache.spark.sql.delta.SnapshotStateManager.extractComputedState$(SnapshotState.scala:126)
+	at org.apache.spark.sql.delta.Snapshot.extractComputedState(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$computedState$2(SnapshotState.scala:80)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$computedState$1(SnapshotState.scala:78)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withJobDescription(DeltaProgressReporter.scala:53)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withStatusCode(DeltaProgressReporter.scala:32)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withStatusCode$(DeltaProgressReporter.scala:27)
+	at org.apache.spark.sql.delta.Snapshot.withStatusCode(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.computedState(SnapshotState.scala:78)
+	at org.apache.spark.sql.delta.SnapshotStateManager.computedState$(SnapshotState.scala:76)
+	at org.apache.spark.sql.delta.Snapshot.computedState$lzycompute(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.computedState(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.setTransactions(SnapshotState.scala:163)
+	at org.apache.spark.sql.delta.SnapshotStateManager.setTransactions$(SnapshotState.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.setTransactions(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.transactions(SnapshotState.scala:70)
+	at org.apache.spark.sql.delta.SnapshotStateManager.transactions$(SnapshotState.scala:70)
+	at org.apache.spark.sql.delta.Snapshot.transactions$lzycompute(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.transactions(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.OptimisticTransactionImpl.txnVersion(OptimisticTransaction.scala:870)
+	at org.apache.spark.sql.delta.OptimisticTransactionImpl.txnVersion$(OptimisticTransaction.scala:868)
+	at org.apache.spark.sql.delta.OptimisticTransaction.txnVersion(OptimisticTransaction.scala:147)
+	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:126)
+	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+26/07/05 16:53:26 ERROR MicroBatchExecution: Query [id = 302b7252-6902-488d-b0ee-b275663b79ba, runId = f3c2a1cd-526b-4b77-b91a-340366f73231] terminated with error
+java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+This stopped SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:1583)
+
+The currently active SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:1583)
+         
+	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
+	at org.apache.spark.SparkContext.broadcastInternal(SparkContext.scala:1654)
+	at org.apache.spark.SparkContext.broadcast(SparkContext.scala:1639)
+	at org.apache.spark.sql.execution.datasources.parquet.ParquetFileFormat.buildReaderWithPartitionValues(ParquetFileFormat.scala:163)
+	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD$lzycompute(DataSourceScanExec.scala:548)
+	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD(DataSourceScanExec.scala:537)
+	at org.apache.spark.sql.execution.FileSourceScanExec.doExecuteColumnar(DataSourceScanExec.scala:587)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeColumnar$1(SparkPlan.scala:222)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.executeColumnar(SparkPlan.scala:218)
+	at org.apache.spark.sql.execution.InputAdapter.doExecuteColumnar(WholeStageCodegenExec.scala:521)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeColumnar$1(SparkPlan.scala:222)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.executeColumnar(SparkPlan.scala:218)
+	at org.apache.spark.sql.execution.ColumnarToRowExec.inputRDDs(Columnar.scala:209)
+	at org.apache.spark.sql.execution.ProjectExec.inputRDDs(basicPhysicalOperators.scala:51)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:751)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.UnionExec.$anonfun$doExecute$4(basicPhysicalOperators.scala:703)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.UnionExec.doExecute(basicPhysicalOperators.scala:703)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.exchange.ShuffleExchangeExec.inputRDD$lzycompute(ShuffleExchangeExec.scala:141)
+	at org.apache.spark.sql.execution.exchange.ShuffleExchangeExec.inputRDD(ShuffleExchangeExec.scala:141)
+	at org.apache.spark.sql.execution.exchange.ShuffleExchangeExec.shuffleDependency$lzycompute(ShuffleExchangeExec.scala:175)
+	at org.apache.spark.sql.execution.exchange.ShuffleExchangeExec.shuffleDependency(ShuffleExchangeExec.scala:173)
+	at org.apache.spark.sql.execution.exchange.ShuffleExchangeExec.doExecute(ShuffleExchangeExec.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.InputAdapter.inputRDD(WholeStageCodegenExec.scala:527)
+	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs(WholeStageCodegenExec.scala:455)
+	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs$(WholeStageCodegenExec.scala:454)
+	at org.apache.spark.sql.execution.InputAdapter.inputRDDs(WholeStageCodegenExec.scala:498)
+	at org.apache.spark.sql.execution.SortExec.inputRDDs(SortExec.scala:132)
+	at org.apache.spark.sql.execution.ProjectExec.inputRDDs(basicPhysicalOperators.scala:51)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:751)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.DeserializeToObjectExec.doExecute(objects.scala:93)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.MapPartitionsExec.doExecute(objects.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.InputAdapter.inputRDD(WholeStageCodegenExec.scala:527)
+	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs(WholeStageCodegenExec.scala:455)
+	at org.apache.spark.sql.execution.InputRDDCodegen.inputRDDs$(WholeStageCodegenExec.scala:454)
+	at org.apache.spark.sql.execution.InputAdapter.inputRDDs(WholeStageCodegenExec.scala:498)
+	at org.apache.spark.sql.execution.SerializeFromObjectExec.inputRDDs(objects.scala:117)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:751)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:207)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:206)
+	at org.apache.spark.sql.delta.util.StateCache$CachedDS.$anonfun$cachedDs$2(StateCache.scala:61)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.util.StateCache$CachedDS.$anonfun$cachedDs$1(StateCache.scala:61)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.delta.util.StateCache$CachedDS.<init>(StateCache.scala:58)
+	at org.apache.spark.sql.delta.util.StateCache.$anonfun$cacheDS$1(StateCache.scala:110)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.util.StateCache.cacheDS(StateCache.scala:110)
+	at org.apache.spark.sql.delta.util.StateCache.cacheDS$(StateCache.scala:108)
+	at org.apache.spark.sql.delta.Snapshot.cacheDS(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.$anonfun$cachedState$1(Snapshot.scala:165)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.cachedState$lzycompute(Snapshot.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.cachedState(Snapshot.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.$anonfun$stateDF$1(Snapshot.scala:253)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.stateDF(Snapshot.scala:253)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$computedState$2(SnapshotState.scala:80)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$computedState$1(SnapshotState.scala:78)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withJobDescription(DeltaProgressReporter.scala:53)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withStatusCode(DeltaProgressReporter.scala:32)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withStatusCode$(DeltaProgressReporter.scala:27)
+	at org.apache.spark.sql.delta.Snapshot.withStatusCode(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.computedState(SnapshotState.scala:78)
+	at org.apache.spark.sql.delta.SnapshotStateManager.computedState$(SnapshotState.scala:76)
+	at org.apache.spark.sql.delta.Snapshot.computedState$lzycompute(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.computedState(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.setTransactions(SnapshotState.scala:163)
+	at org.apache.spark.sql.delta.SnapshotStateManager.setTransactions$(SnapshotState.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.setTransactions(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.transactions(SnapshotState.scala:70)
+	at org.apache.spark.sql.delta.SnapshotStateManager.transactions$(SnapshotState.scala:70)
+	at org.apache.spark.sql.delta.Snapshot.transactions$lzycompute(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.transactions(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.OptimisticTransactionImpl.txnVersion(OptimisticTransaction.scala:870)
+	at org.apache.spark.sql.delta.OptimisticTransactionImpl.txnVersion$(OptimisticTransaction.scala:868)
+	at org.apache.spark.sql.delta.OptimisticTransaction.txnVersion(OptimisticTransaction.scala:147)
+	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:126)
+	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: reentrant call inside <_io.BufferedReader name=944>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+    ^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 179, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o24.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+Settlement streaming started. Bronze / Silver / DLQ writers running.
+Silver path: file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/silver_settlements
+Press Ctrl+C to stop.
+Traceback (most recent call last):
+  File "C:\Users\hp\projects\payment-ops-intelligence\streaming\settlement_stream.py", line 118, in <module>
+    spark.streams.awaitAnyTermination()
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\sql\streaming\query.py", line 596, in awaitAnyTermination
+    return self._jsqm.awaitAnyTermination()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 179, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "C:\Users\hp\projects\payment-ops-intelligence\.venv\Lib\site-packages\py4j\protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o93.awaitAnyTermination
+26/07/05 16:53:27 ERROR MicroBatchExecution: Query [id = 77eb025a-4822-4dd3-b0b3-53ae6b623ce1, runId = 0cfdc0ea-f424-4fb6-8792-d79d6b048ef1] terminated with error
+java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+This stopped SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:1583)
+
+The currently active SparkContext was created at:
+
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+java.base/java.lang.Thread.run(Thread.java:1583)
+         
+	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:122)
+	at org.apache.spark.SparkContext.defaultParallelism(SparkContext.scala:2702)
+	at org.apache.spark.sql.execution.adaptive.CoalesceShufflePartitions.$anonfun$apply$1(CoalesceShufflePartitions.scala:61)
+	at scala.runtime.java8.JFunction0$mcI$sp.apply(JFunction0$mcI$sp.java:23)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.execution.adaptive.CoalesceShufflePartitions.apply(CoalesceShufflePartitions.scala:58)
+	at org.apache.spark.sql.execution.adaptive.CoalesceShufflePartitions.apply(CoalesceShufflePartitions.scala:34)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$optimizeQueryStage$2(AdaptiveSparkPlanExec.scala:169)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.optimizeQueryStage(AdaptiveSparkPlanExec.scala:168)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.newQueryStage(AdaptiveSparkPlanExec.scala:591)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.createQueryStages(AdaptiveSparkPlanExec.scala:540)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$createQueryStages$2(AdaptiveSparkPlanExec.scala:580)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.createQueryStages(AdaptiveSparkPlanExec.scala:580)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$createQueryStages$2(AdaptiveSparkPlanExec.scala:580)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.createQueryStages(AdaptiveSparkPlanExec.scala:580)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$createQueryStages$2(AdaptiveSparkPlanExec.scala:580)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.createQueryStages(AdaptiveSparkPlanExec.scala:580)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$createQueryStages$2(AdaptiveSparkPlanExec.scala:580)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.createQueryStages(AdaptiveSparkPlanExec.scala:580)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$createQueryStages$2(AdaptiveSparkPlanExec.scala:580)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.createQueryStages(AdaptiveSparkPlanExec.scala:580)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$getFinalPhysicalPlan$1(AdaptiveSparkPlanExec.scala:277)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.getFinalPhysicalPlan(AdaptiveSparkPlanExec.scala:272)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.withFinalPlanUpdate(AdaptiveSparkPlanExec.scala:419)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.doExecute(AdaptiveSparkPlanExec.scala:404)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:195)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:246)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:243)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:191)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:207)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:206)
+	at org.apache.spark.sql.delta.util.StateCache$CachedDS.$anonfun$cachedDs$2(StateCache.scala:61)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.util.StateCache$CachedDS.$anonfun$cachedDs$1(StateCache.scala:61)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.delta.util.StateCache$CachedDS.<init>(StateCache.scala:58)
+	at org.apache.spark.sql.delta.util.StateCache.$anonfun$cacheDS$1(StateCache.scala:110)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.util.StateCache.cacheDS(StateCache.scala:110)
+	at org.apache.spark.sql.delta.util.StateCache.cacheDS$(StateCache.scala:108)
+	at org.apache.spark.sql.delta.Snapshot.cacheDS(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.$anonfun$cachedState$1(Snapshot.scala:165)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.cachedState$lzycompute(Snapshot.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.cachedState(Snapshot.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.$anonfun$stateDF$1(Snapshot.scala:253)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.stateDF(Snapshot.scala:253)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$computedState$2(SnapshotState.scala:80)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile(DeltaLogging.scala:168)
+	at org.apache.spark.sql.delta.metering.DeltaLogging.recordFrameProfile$(DeltaLogging.scala:166)
+	at org.apache.spark.sql.delta.Snapshot.recordFrameProfile(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.$anonfun$computedState$1(SnapshotState.scala:78)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withJobDescription(DeltaProgressReporter.scala:53)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withStatusCode(DeltaProgressReporter.scala:32)
+	at org.apache.spark.sql.delta.util.DeltaProgressReporter.withStatusCode$(DeltaProgressReporter.scala:27)
+	at org.apache.spark.sql.delta.Snapshot.withStatusCode(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.computedState(SnapshotState.scala:78)
+	at org.apache.spark.sql.delta.SnapshotStateManager.computedState$(SnapshotState.scala:76)
+	at org.apache.spark.sql.delta.Snapshot.computedState$lzycompute(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.computedState(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.setTransactions(SnapshotState.scala:163)
+	at org.apache.spark.sql.delta.SnapshotStateManager.setTransactions$(SnapshotState.scala:163)
+	at org.apache.spark.sql.delta.Snapshot.setTransactions(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.SnapshotStateManager.transactions(SnapshotState.scala:70)
+	at org.apache.spark.sql.delta.SnapshotStateManager.transactions$(SnapshotState.scala:70)
+	at org.apache.spark.sql.delta.Snapshot.transactions$lzycompute(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.Snapshot.transactions(Snapshot.scala:75)
+	at org.apache.spark.sql.delta.OptimisticTransactionImpl.txnVersion(OptimisticTransaction.scala:870)
+	at org.apache.spark.sql.delta.OptimisticTransactionImpl.txnVersion$(OptimisticTransaction.scala:868)
+	at org.apache.spark.sql.delta.OptimisticTransaction.txnVersion(OptimisticTransaction.scala:147)
+	at org.apache.spark.sql.delta.sources.DeltaSink.addBatchWithStatusImpl(DeltaSink.scala:126)
+	at org.apache.spark.sql.delta.sources.DeltaSink.addBatch(DeltaSink.scala:97)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+26/07/05 16:53:27 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\hp\AppData\Local\Temp\spark-833a8b42-13c5-4f24-ac22-4f5d2d13c6c9\userFiles-c54eb33c-5cc6-4c3b-8591-1218e17dd4c9
+java.io.IOException: Failed to delete: C:\Users\hp\AppData\Local\Temp\spark-833a8b42-13c5-4f24-ac22-4f5d2d13c6c9\userFiles-c54eb33c-5cc6-4c3b-8591-1218e17dd4c9\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:108)
+	at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2305)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2305)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+	at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:27 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\hp\AppData\Local\Temp\spark-833a8b42-13c5-4f24-ac22-4f5d2d13c6c9
+java.io.IOException: Failed to delete: C:\Users\hp\AppData\Local\Temp\spark-833a8b42-13c5-4f24-ac22-4f5d2d13c6c9\userFiles-c54eb33c-5cc6-4c3b-8591-1218e17dd4c9\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+26/07/05 16:53:27 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\hp\AppData\Local\Temp\spark-833a8b42-13c5-4f24-ac22-4f5d2d13c6c9\userFiles-c54eb33c-5cc6-4c3b-8591-1218e17dd4c9
+java.io.IOException: Failed to delete: C:\Users\hp\AppData\Local\Temp\spark-833a8b42-13c5-4f24-ac22-4f5d2d13c6c9\userFiles-c54eb33c-5cc6-4c3b-8591-1218e17dd4c9\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:147)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+SUCCESS: The process with PID 15532 (child process of PID 14896) has been terminated.
+SUCCESS: The process with PID 14896 (child process of PID 13560) has been terminated.
+SUCCESS: The process with PID 13560 (child process of PID 18560) has been terminated.

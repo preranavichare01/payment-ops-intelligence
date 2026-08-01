@@ -31,3 +31,14 @@ orchestration/airflow/logs/
 Thumbs.db
 .vscode/
 .idea/
+# Log files
+*.log
+*_log*.txt
+*_inspect.json
+correlation_log.txt
+join_log.txt
+
+# dbt artifacts
+batch/dbt_gold/target/
+batch/dbt_gold/logs/
+batch/dbt_gold/dbt_packages/

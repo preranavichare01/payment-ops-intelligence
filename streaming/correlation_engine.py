@@ -20,10 +20,22 @@ same-window, multi-entity correlation logic.
 """
 
 import os
+
+
+import sys
+
 from pathlib import Path
 from datetime import datetime, timezone
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, current_timestamp, lit
+
+
+# Windows PySpark spawns a Python worker subprocess for operations like
+# createDataFrame() — it defaults to looking for a binary literally named
+# "python3", which doesn't exist on Windows (only python.exe does).
+# Pointing both these env vars at sys.executable fixes it.
+os.environ["PYSPARK_PYTHON"] = sys.executable
+os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 

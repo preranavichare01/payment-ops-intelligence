@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: mart_ops_dashboard_metrics
+    columns:
+      - name: total_transactions
+        tests:
+          - not_null
+      - name: payment_method
+        tests:
+          - not_null
+
+  - name: mart_settlement_reconciliation
+    columns:
+      - name: merchant_id
+        tests:
+          - not_null

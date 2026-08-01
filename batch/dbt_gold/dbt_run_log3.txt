@@ -1,0 +1,467 @@
+13:34:47  Running with dbt=1.12.0-b3
+13:34:47  Registered adapter: spark=1.10.3
+13:34:48  Unable to do partial parsing because a project config has changed
+13:34:49  Found 7 models, 3 data tests, 514 macros
+13:34:49  
+13:34:49  Concurrency: 4 threads (target='dev')
+13:34:49  
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+:: loading settings :: url = jar:file:/C:/Users/hp/Downloads/spark-3.5.8-bin-hadoop3/spark-3.5.8-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: C:\Users\hp\.ivy2\cache
+The jars for the packages stored in: C:\Users\hp\.ivy2\jars
+io.delta#delta-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-d514e533-d9bb-4a63-abd9-f4e434c4db61;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.2.0 in central
+	found io.delta#delta-storage;3.2.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+:: resolution report :: resolve 194ms :: artifacts dl 56ms
+	:: modules in use:
+	io.delta#delta-spark_2.12;3.2.0 from central in [default]
+	io.delta#delta-storage;3.2.0 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-d514e533-d9bb-4a63-abd9-f4e434c4db61
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/34ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/07/11 19:04:58 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:04:58 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+26/07/11 19:05:00 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 2.3.0
+26/07/11 19:05:00 WARN ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 2.3.0, comment = Set by MetaStore UNKNOWN@192.168.0.104
+26/07/11 19:05:01 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:05:01 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+26/07/11 19:05:01 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+13:35:01  1 of 7 START sql table model default.mart_correlation_summary .................. [RUN]
+13:35:01  2 of 7 START sql view model default.stg_silver_settlements ..................... [RUN]
+13:35:01  3 of 7 START sql view model default.stg_silver_transactions .................... [RUN]
+26/07/11 19:05:01 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:05:01 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+26/07/11 19:05:02 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:05:02 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+26/07/11 19:05:02 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:02 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:05:02 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+26/07/11 19:05:02 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:02 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:05 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
+[Stage 0:>                                                          (0 + 1) / 1][Stage 0:>    (0 + 1) / 1][Stage 1:>    (0 + 1) / 1][Stage 2:>    (0 + 1) / 1]                                                                                [Stage 0:>    (0 + 1) / 1][Stage 2:>    (0 + 1) / 1][Stage 3:==>  (1 + 1) / 2]                                                                                26/07/11 19:05:11 ERROR Utils: Aborting task
+org.apache.spark.sql.AnalysisException: Table mart_correlation_summary does not support truncate in batch mode.;
+OverwriteByExpression RelationV2[classification#241, affected_banks#242, detected_at#243] spark_catalog.default.mart_correlation_summary mart_correlation_summary, true, false
++- Project [classification#238, affected_banks#237, detected_at#239]
+   +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/gold_correlation_events`
+      +- Relation [affected_banks#237,classification#238,detected_at#239] parquet
+
+	at org.apache.spark.sql.errors.QueryCompilationErrors$.unsupportedTableOperationError(QueryCompilationErrors.scala:1277)
+	at org.apache.spark.sql.errors.QueryCompilationErrors$.unsupportedTruncateInBatchModeError(QueryCompilationErrors.scala:1297)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.$anonfun$apply$1(TableCapabilityCheck.scala:61)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.$anonfun$apply$1$adapted(TableCapabilityCheck.scala:40)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.foreach(TreeNode.scala:234)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.apply(TableCapabilityCheck.scala:40)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.apply(TableCapabilityCheck.scala:32)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$60(CheckAnalysis.scala:822)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$60$adapted(CheckAnalysis.scala:822)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0(CheckAnalysis.scala:822)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0$(CheckAnalysis.scala:197)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis0(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis(CheckAnalysis.scala:193)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis$(CheckAnalysis.scala:171)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:225)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.$anonfun$writeToTable$1(WriteToDataSourceV2Exec.scala:587)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1397)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.writeToTable(WriteToDataSourceV2Exec.scala:579)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.writeToTable$(WriteToDataSourceV2Exec.scala:572)
+	at org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec.writeToTable(WriteToDataSourceV2Exec.scala:186)
+	at org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec.run(WriteToDataSourceV2Exec.scala:221)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.executeCollect(V2CommandExec.scala:49)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:220)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:100)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:97)
+	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:638)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:629)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:659)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:75)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+13:35:11  1 of 7 ERROR creating sql table model default.mart_correlation_summary ......... [ERROR in 10.00s]
+[Stage 3:=========>         (1 + 1) / 2][Stage 4:================>  (6 + 1) / 7]                                                                                26/07/11 19:05:12 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:12 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:13 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+26/07/11 19:05:13 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+26/07/11 19:05:13 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:05:14 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+13:35:14  2 of 7 OK created sql view model default.stg_silver_settlements ................ [OK in 12.59s]
+13:35:14  3 of 7 OK created sql view model default.stg_silver_transactions ............... [OK in 12.75s]
+13:35:14  4 of 7 START sql view model default.int_bank_health ............................ [RUN]
+13:35:14  5 of 7 START sql view model default.int_payment_enriched ....................... [RUN]
+13:35:14  6 of 7 START sql table model default.mart_ops_dashboard_metrics ................ [RUN]
+26/07/11 19:05:14 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+26/07/11 19:05:14 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+26/07/11 19:05:14 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+26/07/11 19:05:14 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:14 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:14 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:15 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:15 ERROR Utils: Aborting task
+org.apache.spark.sql.AnalysisException: Table mart_ops_dashboard_metrics does not support truncate in batch mode.;
+OverwriteByExpression RelationV2[event_date#498, payment_method#499, merchant_category#500, total_transactions#501L, success_count#502L, timeout_count#503L, total_volume_inr#504, avg_response_time_ms#505] spark_catalog.default.mart_ops_dashboard_metrics mart_ops_dashboard_metrics, true, false
++- Aggregate [event_date#395, payment_method#388, merchant_category#387], [event_date#395, payment_method#388, merchant_category#387, count(1) AS total_transactions#351L, sum(CASE WHEN (status#390 = success) THEN 1 ELSE 0 END) AS success_count#352L, sum(CASE WHEN (status#390 = timeout) THEN 1 ELSE 0 END) AS timeout_count#353L, sum(amount_inr#389) AS total_volume_inr#354, avg(response_time_ms#392) AS avg_response_time_ms#355]
+   +- SubqueryAlias spark_catalog.default.stg_silver_transactions
+      +- View (`spark_catalog`.`default`.`stg_silver_transactions`, [transaction_id#384,user_id#385,merchant_id#386,merchant_category#387,payment_method#388,amount_inr#389,status#390,bank_response_code#391,response_time_ms#392,city#393,event_time#394,event_date#395])
+         +- Project [cast(transaction_id#433 as string) AS transaction_id#384, cast(user_id#434 as string) AS user_id#385, cast(merchant_id#435 as string) AS merchant_id#386, cast(merchant_category#436 as string) AS merchant_category#387, cast(payment_method#437 as string) AS payment_method#388, cast(amount_inr#438 as double) AS amount_inr#389, cast(status#439 as string) AS status#390, cast(bank_response_code#440 as string) AS bank_response_code#391, cast(response_time_ms#441 as int) AS response_time_ms#392, cast(city#442 as string) AS city#393, cast(event_time#381 as timestamp) AS event_time#394, cast(event_date#382 as date) AS event_date#395]
+            +- WithCTE
+               :- CTERelationDef 3, false
+               :  +- SubqueryAlias parsed
+               :     +- Project [from_json(StructField(transaction_id,StringType,true), StructField(user_id,StringType,true), StructField(merchant_id,StringType,true), StructField(merchant_category,StringType,true), StructField(payment_method,StringType,true), StructField(amount_inr,DoubleType,true), StructField(currency,StringType,true), StructField(status,StringType,true), StructField(bank_response_code,StringType,true), StructField(response_time_ms,IntegerType,true), StructField(is_international,BooleanType,true), StructField(device_type,StringType,true), StructField(city,StringType,true), StructField(timestamp,StringType,true), value#429, Some(Asia/Calcutta)) AS data#383]
+               :        +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/bronze_transactions`
+               :           +- Relation [key#428,value#429,kafka_timestamp#430] parquet
+               +- Project [data#383.transaction_id AS transaction_id#433, data#383.user_id AS user_id#434, data#383.merchant_id AS merchant_id#435, data#383.merchant_category AS merchant_category#436, data#383.payment_method AS payment_method#437, data#383.amount_inr AS amount_inr#438, data#383.status AS status#439, data#383.bank_response_code AS bank_response_code#440, data#383.response_time_ms AS response_time_ms#441, data#383.city AS city#442, cast(data#383.timestamp as timestamp) AS event_time#381, cast(cast(data#383.timestamp as timestamp) as date) AS event_date#382]
+                  +- Filter isnotnull(data#383.transaction_id)
+                     +- SubqueryAlias parsed
+                        +- CTERelationRef 3, true, [data#383], false
+
+	at org.apache.spark.sql.errors.QueryCompilationErrors$.unsupportedTableOperationError(QueryCompilationErrors.scala:1277)
+	at org.apache.spark.sql.errors.QueryCompilationErrors$.unsupportedTruncateInBatchModeError(QueryCompilationErrors.scala:1297)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.$anonfun$apply$1(TableCapabilityCheck.scala:61)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.$anonfun$apply$1$adapted(TableCapabilityCheck.scala:40)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.foreach(TreeNode.scala:234)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.apply(TableCapabilityCheck.scala:40)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.apply(TableCapabilityCheck.scala:32)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$60(CheckAnalysis.scala:822)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$60$adapted(CheckAnalysis.scala:822)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0(CheckAnalysis.scala:822)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0$(CheckAnalysis.scala:197)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis0(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis(CheckAnalysis.scala:193)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis$(CheckAnalysis.scala:171)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:225)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.$anonfun$writeToTable$1(WriteToDataSourceV2Exec.scala:587)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1397)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.writeToTable(WriteToDataSourceV2Exec.scala:579)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.writeToTable$(WriteToDataSourceV2Exec.scala:572)
+	at org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec.writeToTable(WriteToDataSourceV2Exec.scala:186)
+	at org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec.run(WriteToDataSourceV2Exec.scala:221)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.executeCollect(V2CommandExec.scala:49)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:220)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:100)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:97)
+	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:638)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:629)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:659)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:75)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+13:35:15  6 of 7 ERROR creating sql table model default.mart_ops_dashboard_metrics ....... [ERROR in 1.16s]
+26/07/11 19:05:15 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:15 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:16 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+13:35:16  4 of 7 OK created sql view model default.int_bank_health ....................... [OK in 1.94s]
+13:35:16  5 of 7 OK created sql view model default.int_payment_enriched .................. [OK in 2.01s]
+13:35:16  7 of 7 START sql table model default.mart_settlement_reconciliation ............ [RUN]
+26/07/11 19:05:16 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:16 WARN ObjectStore: Failed to get database delta, returning NoSuchObjectException
+26/07/11 19:05:17 ERROR Utils: Aborting task
+org.apache.spark.sql.AnalysisException: Table mart_settlement_reconciliation does not support truncate in batch mode.;
+OverwriteByExpression RelationV2[event_date#732, merchant_id#733, total_settled_transactions#734L, delayed_count#735L, total_txn_amount#736, total_settled_amount#737, amount_discrepancy#738] spark_catalog.default.mart_settlement_reconciliation mart_settlement_reconciliation, true, false
++- Aggregate [event_date#669, merchant_id#659], [event_date#669, merchant_id#659, count(1) AS total_settled_transactions#651L, sum(CASE WHEN is_delayed#668 THEN 1 ELSE 0 END) AS delayed_count#652L, sum(amount_inr#661) AS total_txn_amount#653, sum(settled_amount_inr#665) AS total_settled_amount#654, (sum(amount_inr#661) - sum(settled_amount_inr#665)) AS amount_discrepancy#655]
+   +- SubqueryAlias spark_catalog.default.int_payment_enriched
+      +- View (`spark_catalog`.`default`.`int_payment_enriched`, [transaction_id#658,merchant_id#659,payment_method#660,amount_inr#661,status#662,transaction_time#663,settlement_id#664,settled_amount_inr#665,settlement_status#666,delay_seconds#667,is_delayed#668,event_date#669])
+         +- Project [cast(transaction_id#673 as string) AS transaction_id#658, cast(merchant_id#675 as string) AS merchant_id#659, cast(payment_method#677 as string) AS payment_method#660, cast(amount_inr#678 as double) AS amount_inr#661, cast(status#679 as string) AS status#662, cast(transaction_time#656 as timestamp) AS transaction_time#663, cast(settlement_id#704 as string) AS settlement_id#664, cast(settled_amount_inr#707 as double) AS settled_amount_inr#665, cast(settlement_status#708 as string) AS settlement_status#666, cast(delay_seconds#710 as int) AS delay_seconds#667, cast(is_delayed#657 as boolean) AS is_delayed#668, cast(event_date#684 as date) AS event_date#669]
+            +- Project [transaction_id#673, merchant_id#675, payment_method#677, amount_inr#678, status#679, event_time#683 AS transaction_time#656, settlement_id#704, settled_amount_inr#707, settlement_status#708, delay_seconds#710, CASE WHEN (delay_seconds#710 > 180) THEN true ELSE false END AS is_delayed#657, event_date#684]
+               +- Filter (status#679 = success)
+                  +- Join LeftOuter, (transaction_id#673 = transaction_id#705)
+                     :- SubqueryAlias t
+                     :  +- SubqueryAlias spark_catalog.default.stg_silver_transactions
+                     :     +- View (`spark_catalog`.`default`.`stg_silver_transactions`, [transaction_id#673,user_id#674,merchant_id#675,merchant_category#676,payment_method#677,amount_inr#678,status#679,bank_response_code#680,response_time_ms#681,city#682,event_time#683,event_date#684])
+                     :        +- Project [cast(transaction_id#690 as string) AS transaction_id#673, cast(user_id#691 as string) AS user_id#674, cast(merchant_id#692 as string) AS merchant_id#675, cast(merchant_category#693 as string) AS merchant_category#676, cast(payment_method#694 as string) AS payment_method#677, cast(amount_inr#695 as double) AS amount_inr#678, cast(status#696 as string) AS status#679, cast(bank_response_code#697 as string) AS bank_response_code#680, cast(response_time_ms#698 as int) AS response_time_ms#681, cast(city#699 as string) AS city#682, cast(event_time#670 as timestamp) AS event_time#683, cast(event_date#671 as date) AS event_date#684]
+                     :           +- WithCTE
+                     :              :- CTERelationDef 7, false
+                     :              :  +- SubqueryAlias parsed
+                     :              :     +- Project [from_json(StructField(transaction_id,StringType,true), StructField(user_id,StringType,true), StructField(merchant_id,StringType,true), StructField(merchant_category,StringType,true), StructField(payment_method,StringType,true), StructField(amount_inr,DoubleType,true), StructField(currency,StringType,true), StructField(status,StringType,true), StructField(bank_response_code,StringType,true), StructField(response_time_ms,IntegerType,true), StructField(is_international,BooleanType,true), StructField(device_type,StringType,true), StructField(city,StringType,true), StructField(timestamp,StringType,true), value#686, Some(Asia/Calcutta)) AS data#672]
+                     :              :        +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/bronze_transactions`
+                     :              :           +- Relation [key#685,value#686,kafka_timestamp#687] parquet
+                     :              +- Project [data#672.transaction_id AS transaction_id#690, data#672.user_id AS user_id#691, data#672.merchant_id AS merchant_id#692, data#672.merchant_category AS merchant_category#693, data#672.payment_method AS payment_method#694, data#672.amount_inr AS amount_inr#695, data#672.status AS status#696, data#672.bank_response_code AS bank_response_code#697, data#672.response_time_ms AS response_time_ms#698, data#672.city AS city#699, cast(data#672.timestamp as timestamp) AS event_time#670, cast(cast(data#672.timestamp as timestamp) as date) AS event_date#671]
+                     :                 +- Filter isnotnull(data#672.transaction_id)
+                     :                    +- SubqueryAlias parsed
+                     :                       +- CTERelationRef 7, true, [data#672], false
+                     +- SubqueryAlias s
+                        +- SubqueryAlias spark_catalog.default.stg_silver_settlements
+                           +- View (`spark_catalog`.`default`.`stg_silver_settlements`, [settlement_id#704,transaction_id#705,merchant_id#706,settled_amount_inr#707,settlement_status#708,bank_reference_number#709,delay_seconds#710,event_time#711,event_date#712])
+                              +- Project [cast(settlement_id#713 as string) AS settlement_id#704, cast(transaction_id#714 as string) AS transaction_id#705, cast(merchant_id#715 as string) AS merchant_id#706, cast(settled_amount_inr#716 as double) AS settled_amount_inr#707, cast(settlement_status#717 as string) AS settlement_status#708, cast(bank_reference_number#718 as string) AS bank_reference_number#709, cast(delay_seconds#722 as int) AS delay_seconds#710, cast(event_time#702 as timestamp) AS event_time#711, cast(event_date#703 as date) AS event_date#712]
+                                 +- Project [settlement_id#713, transaction_id#714, merchant_id#715, settled_amount_inr#716, settlement_status#717, bank_reference_number#718, delay_seconds#722, cast(settlement_timestamp#719 as timestamp) AS event_time#702, cast(cast(settlement_timestamp#719 as timestamp) as date) AS event_date#703]
+                                    +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/silver_settlements`
+                                       +- Relation [settlement_id#713,transaction_id#714,merchant_id#715,settled_amount_inr#716,settlement_status#717,bank_reference_number#718,settlement_timestamp#719,expected_settlement_time#720,actual_settlement_time#721,delay_seconds#722,kafka_timestamp#723,event_time#724-T60000ms] parquet
+
+	at org.apache.spark.sql.errors.QueryCompilationErrors$.unsupportedTableOperationError(QueryCompilationErrors.scala:1277)
+	at org.apache.spark.sql.errors.QueryCompilationErrors$.unsupportedTruncateInBatchModeError(QueryCompilationErrors.scala:1297)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.$anonfun$apply$1(TableCapabilityCheck.scala:61)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.$anonfun$apply$1$adapted(TableCapabilityCheck.scala:40)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.foreach(TreeNode.scala:234)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.apply(TableCapabilityCheck.scala:40)
+	at org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck$.apply(TableCapabilityCheck.scala:32)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$60(CheckAnalysis.scala:822)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$60$adapted(CheckAnalysis.scala:822)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0(CheckAnalysis.scala:822)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0$(CheckAnalysis.scala:197)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis0(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis(CheckAnalysis.scala:193)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis$(CheckAnalysis.scala:171)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:202)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:225)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.$anonfun$writeToTable$1(WriteToDataSourceV2Exec.scala:587)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1397)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.writeToTable(WriteToDataSourceV2Exec.scala:579)
+	at org.apache.spark.sql.execution.datasources.v2.V2CreateTableAsSelectBaseExec.writeToTable$(WriteToDataSourceV2Exec.scala:572)
+	at org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec.writeToTable(WriteToDataSourceV2Exec.scala:186)
+	at org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec.run(WriteToDataSourceV2Exec.scala:221)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.executeCollect(V2CommandExec.scala:49)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:220)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:100)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:97)
+	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:638)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:629)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:659)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:75)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+13:35:17  7 of 7 ERROR creating sql table model default.mart_settlement_reconciliation ... [ERROR in 0.64s]
+13:35:17  
+13:35:17  Finished running 3 table models, 4 view models in 0 hours 0 minutes and 27.75 seconds (27.75s).
+13:35:17  
+13:35:17  Completed with 3 errors, 0 partial successes, and 0 warnings:
+13:35:17  
+13:35:17  [ERROR]: in model mart_correlation_summary (models\marts\mart_correlation_summary.sql)
+13:35:17    Runtime Error in model mart_correlation_summary (models\marts\mart_correlation_summary.sql)
+  Runtime Error
+    Table mart_correlation_summary does not support truncate in batch mode.;
+    OverwriteByExpression RelationV2[classification#241, affected_banks#242, detected_at#243] spark_catalog.default.mart_correlation_summary mart_correlation_summary, true, false
+    +- Project [classification#238, affected_banks#237, detected_at#239]
+       +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/gold_correlation_events`
+          +- Relation [affected_banks#237,classification#238,detected_at#239] parquet
+    
+13:35:17  
+13:35:17    compiled code at target\compiled\payment_ops_gold\models\marts\mart_correlation_summary.sql
+13:35:17  
+13:35:17  [ERROR]: in model mart_ops_dashboard_metrics (models\marts\mart_ops_dashboard_metrics.sql)
+13:35:17    Runtime Error in model mart_ops_dashboard_metrics (models\marts\mart_ops_dashboard_metrics.sql)
+  Runtime Error
+    Table mart_ops_dashboard_metrics does not support truncate in batch mode.;
+    OverwriteByExpression RelationV2[event_date#498, payment_method#499, merchant_category#500, total_transactions#501L, success_count#502L, timeout_count#503L, total_volume_inr#504, avg_response_time_ms#505] spark_catalog.default.mart_ops_dashboard_metrics mart_ops_dashboard_metrics, true, false
+    +- Aggregate [event_date#395, payment_method#388, merchant_category#387], [event_date#395, payment_method#388, merchant_category#387, count(1) AS total_transactions#351L, sum(CASE WHEN (status#390 = success) THEN 1 ELSE 0 END) AS success_count#352L, sum(CASE WHEN (status#390 = timeout) THEN 1 ELSE 0 END) AS timeout_count#353L, sum(amount_inr#389) AS total_volume_inr#354, avg(response_time_ms#392) AS avg_response_time_ms#355]
+       +- SubqueryAlias spark_catalog.default.stg_silver_transactions
+          +- View (`spark_catalog`.`default`.`stg_silver_transactions`, [transaction_id#384,user_id#385,merchant_id#386,merchant_category#387,payment_method#388,amount_inr#389,status#390,bank_response_code#391,response_time_ms#392,city#393,event_time#394,event_date#395])
+             +- Project [cast(transaction_id#433 as string) AS transaction_id#384, cast(user_id#434 as string) AS user_id#385, cast(merchant_id#435 as string) AS merchant_id#386, cast(merchant_category#436 as string) AS merchant_category#387, cast(payment_method#437 as string) AS payment_method#388, cast(amount_inr#438 as double) AS amount_inr#389, cast(status#439 as string) AS status#390, cast(bank_response_code#440 as string) AS bank_response_code#391, cast(response_time_ms#441 as int) AS response_time_ms#392, cast(city#442 as string) AS city#393, cast(event_time#381 as timestamp) AS event_time#394, cast(event_date#382 as date) AS event_date#395]
+                +- WithCTE
+                   :- CTERelationDef 3, false
+                   :  +- SubqueryAlias parsed
+                   :     +- Project [from_json(StructField(transaction_id,StringType,true), StructField(user_id,StringType,true), StructField(merchant_id,StringType,true), StructField(merchant_category,StringType,true), StructField(payment_method,StringType,true), StructField(amount_inr,DoubleType,true), StructField(currency,StringType,true), StructField(status,StringType,true), StructField(bank_response_code,StringType,true), StructField(response_time_ms,IntegerType,true), StructField(is_international,BooleanType,true), StructField(device_type,StringType,true), StructField(city,StringType,true), StructField(timestamp,StringType,true), value#429, Some(Asia/Calcutta)) AS data#383]
+                   :        +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/bronze_transactions`
+                   :           +- Relation [key#428,value#429,kafka_timestamp#430] parquet
+                   +- Project [data#383.transaction_id AS transaction_id#433, data#383.user_id AS user_id#434, data#383.merchant_id AS merchant_id#435, data#383.merchant_category AS merchant_category#436, data#383.payment_method AS payment_method#437, data#383.amount_inr AS amount_inr#438, data#383.status AS status#439, data#383.bank_response_code AS bank_response_code#440, data#383.response_time_ms AS response_time_ms#441, data#383.city AS city#442, cast(data#383.timestamp as timestamp) AS event_time#381, cast(cast(data#383.timestamp as timestamp) as date) AS event_date#382]
+                      +- Filter isnotnull(data#383.transaction_id)
+                         +- SubqueryAlias parsed
+                            +- CTERelationRef 3, true, [data#383], false
+    
+13:35:17  
+13:35:17    compiled code at target\compiled\payment_ops_gold\models\marts\mart_ops_dashboard_metrics.sql
+13:35:17  
+13:35:17  [ERROR]: in model mart_settlement_reconciliation (models\marts\mart_settlement_reconciliation.sql)
+13:35:17    Runtime Error in model mart_settlement_reconciliation (models\marts\mart_settlement_reconciliation.sql)
+  Runtime Error
+    Table mart_settlement_reconciliation does not support truncate in batch mode.;
+    OverwriteByExpression RelationV2[event_date#732, merchant_id#733, total_settled_transactions#734L, delayed_count#735L, total_txn_amount#736, total_settled_amount#737, amount_discrepancy#738] spark_catalog.default.mart_settlement_reconciliation mart_settlement_reconciliation, true, false
+    +- Aggregate [event_date#669, merchant_id#659], [event_date#669, merchant_id#659, count(1) AS total_settled_transactions#651L, sum(CASE WHEN is_delayed#668 THEN 1 ELSE 0 END) AS delayed_count#652L, sum(amount_inr#661) AS total_txn_amount#653, sum(settled_amount_inr#665) AS total_settled_amount#654, (sum(amount_inr#661) - sum(settled_amount_inr#665)) AS amount_discrepancy#655]
+       +- SubqueryAlias spark_catalog.default.int_payment_enriched
+          +- View (`spark_catalog`.`default`.`int_payment_enriched`, [transaction_id#658,merchant_id#659,payment_method#660,amount_inr#661,status#662,transaction_time#663,settlement_id#664,settled_amount_inr#665,settlement_status#666,delay_seconds#667,is_delayed#668,event_date#669])
+             +- Project [cast(transaction_id#673 as string) AS transaction_id#658, cast(merchant_id#675 as string) AS merchant_id#659, cast(payment_method#677 as string) AS payment_method#660, cast(amount_inr#678 as double) AS amount_inr#661, cast(status#679 as string) AS status#662, cast(transaction_time#656 as timestamp) AS transaction_time#663, cast(settlement_id#704 as string) AS settlement_id#664, cast(settled_amount_inr#707 as double) AS settled_amount_inr#665, cast(settlement_status#708 as string) AS settlement_status#666, cast(delay_seconds#710 as int) AS delay_seconds#667, cast(is_delayed#657 as boolean) AS is_delayed#668, cast(event_date#684 as date) AS event_date#669]
+                +- Project [transaction_id#673, merchant_id#675, payment_method#677, amount_inr#678, status#679, event_time#683 AS transaction_time#656, settlement_id#704, settled_amount_inr#707, settlement_status#708, delay_seconds#710, CASE WHEN (delay_seconds#710 > 180) THEN true ELSE false END AS is_delayed#657, event_date#684]
+                   +- Filter (status#679 = success)
+                      +- Join LeftOuter, (transaction_id#673 = transaction_id#705)
+                         :- SubqueryAlias t
+                         :  +- SubqueryAlias spark_catalog.default.stg_silver_transactions
+                         :     +- View (`spark_catalog`.`default`.`stg_silver_transactions`, [transaction_id#673,user_id#674,merchant_id#675,merchant_category#676,payment_method#677,amount_inr#678,status#679,bank_response_code#680,response_time_ms#681,city#682,event_time#683,event_date#684])
+                         :        +- Project [cast(transaction_id#690 as string) AS transaction_id#673, cast(user_id#691 as string) AS user_id#674, cast(merchant_id#692 as string) AS merchant_id#675, cast(merchant_category#693 as string) AS merchant_category#676, cast(payment_method#694 as string) AS payment_method#677, cast(amount_inr#695 as double) AS amount_inr#678, cast(status#696 as string) AS status#679, cast(bank_response_code#697 as string) AS bank_response_code#680, cast(response_time_ms#698 as int) AS response_time_ms#681, cast(city#699 as string) AS city#682, cast(event_time#670 as timestamp) AS event_time#683, cast(event_date#671 as date) AS event_date#684]
+                         :           +- WithCTE
+                         :              :- CTERelationDef 7, false
+                         :              :  +- SubqueryAlias parsed
+                         :              :     +- Project [from_json(StructField(transaction_id,StringType,true), StructField(user_id,StringType,true), StructField(merchant_id,StringType,true), StructField(merchant_category,StringType,true), StructField(payment_method,StringType,true), StructField(amount_inr,DoubleType,true), StructField(currency,StringType,true), StructField(status,StringType,true), StructField(bank_response_code,StringType,true), StructField(response_time_ms,IntegerType,true), StructField(is_international,BooleanType,true), StructField(device_type,StringType,true), StructField(city,StringType,true), StructField(timestamp,StringType,true), value#686, Some(Asia/Calcutta)) AS data#672]
+                         :              :        +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/bronze_transactions`
+                         :              :           +- Relation [key#685,value#686,kafka_timestamp#687] parquet
+                         :              +- Project [data#672.transaction_id AS transaction_id#690, data#672.user_id AS user_id#691, data#672.merchant_id AS merchant_id#692, data#672.merchant_category AS merchant_category#693, data#672.payment_method AS payment_method#694, data#672.amount_inr AS amount_inr#695, data#672.status AS status#696, data#672.bank_response_code AS bank_response_code#697, data#672.response_time_ms AS response_time_ms#698, data#672.city AS city#699, cast(data#672.timestamp as timestamp) AS event_time#670, cast(cast(data#672.timestamp as timestamp) as date) AS event_date#671]
+                         :                 +- Filter isnotnull(data#672.transaction_id)
+                         :                    +- SubqueryAlias parsed
+                         :                       +- CTERelationRef 7, true, [data#672], false
+                         +- SubqueryAlias s
+                            +- SubqueryAlias spark_catalog.default.stg_silver_settlements
+                               +- View (`spark_catalog`.`default`.`stg_silver_settlements`, [settlement_id#704,transaction_id#705,merchant_id#706,settled_amount_inr#707,settlement_status#708,bank_reference_number#709,delay_seconds#710,event_time#711,event_date#712])
+                                  +- Project [cast(settlement_id#713 as string) AS settlement_id#704, cast(transaction_id#714 as string) AS transaction_id#705, cast(merchant_id#715 as string) AS merchant_id#706, cast(settled_amount_inr#716 as double) AS settled_amount_inr#707, cast(settlement_status#717 as string) AS settlement_status#708, cast(bank_reference_number#718 as string) AS bank_reference_number#709, cast(delay_seconds#722 as int) AS delay_seconds#710, cast(event_time#702 as timestamp) AS event_time#711, cast(event_date#703 as date) AS event_date#712]
+                                     +- Project [settlement_id#713, transaction_id#714, merchant_id#715, settled_amount_inr#716, settlement_status#717, bank_reference_number#718, delay_seconds#722, cast(settlement_timestamp#719 as timestamp) AS event_time#702, cast(cast(settlement_timestamp#719 as timestamp) as date) AS event_date#703]
+                                        +- SubqueryAlias spark_catalog.delta.`file:///C:/Users/hp/projects/payment-ops-intelligence/data/processed/silver_settlements`
+                                           +- Relation [settlement_id#713,transaction_id#714,merchant_id#715,settled_amount_inr#716,settlement_status#717,bank_reference_number#718,settlement_timestamp#719,expected_settlement_time#720,actual_settlement_time#721,delay_seconds#722,kafka_timestamp#723,event_time#724-T60000ms] parquet
+    
+13:35:17  
+13:35:17    compiled code at target\compiled\payment_ops_gold\models\marts\mart_settlement_reconciliation.sql
+13:35:17  
+13:35:17  Done. PASS=4 WARN=0 ERROR=3 SKIP=0 NO-OP=0 REUSED=0 TOTAL=7
+SUCCESS: The process with PID 12800 (child process of PID 18200) has been terminated.
+SUCCESS: The process with PID 18200 (child process of PID 10692) has been terminated.
+SUCCESS: The process with PID 10692 (child process of PID 18416) has been terminated.

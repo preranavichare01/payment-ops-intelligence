@@ -1,0 +1,13 @@
+payment_ops_gold:
+  target: dev
+  outputs:
+    dev:
+      type: spark
+      method: session
+      schema: default
+      host: NA
+      threads: 4
+      config_options:
+        spark.jars.packages: "io.delta:delta-spark_2.12:3.2.0"
+        spark.sql.extensions: "io.delta.sql.DeltaSparkSessionExtension"
+        spark.sql.catalog.spark_catalog: "org.apache.spark.sql.delta.catalog.DeltaCatalog"

@@ -1,0 +1,21 @@
+name: 'payment_ops_gold'
+version: '1.0.0'
+config-version: 2
+
+profile: 'payment_ops_gold'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+vars:
+  project_root: "file:///C:/Users/hp/projects/payment-ops-intelligence"
+
+models:
+  payment_ops_gold:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+      +file_format: delta
