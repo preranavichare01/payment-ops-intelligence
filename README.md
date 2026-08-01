@@ -151,10 +151,14 @@ correlation/reconciliation logic instead. It's a natural next phase.
 
 Live Power BI report: [Payment Ecosystem Analysis](https://app.powerbi.com/groups/me/reports/cfa1efd1-622e-4c11-8ffc-ef918e35c093/2b5cae02a923e4036413?experience=power-bi)
 
+Downloadable copies (no Power BI account needed to view):
+- [Power BI report file (.pbix)](powerbi/report/payment_ecosystem_analysis.pbix)
+- [PDF export](powerbi/report/payment_ecosystem_analysis.pdf)
+
 ### Airflow
 
 **DAG runs**
-![Airflow DAG runs](docs/screenshots/airflow_dags.png)
+![Airflow DAG runs](docs/screenshots/airflow_payment.jpg)
 
 ---
 
