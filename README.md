@@ -149,6 +149,9 @@ correlation/reconciliation logic instead. It's a natural next phase.
 **Page 3 — Cross-Bank Correlation**
 ![Power BI - Cross-Bank Correlation](docs/screenshots/crosspowerbi.jpg)
 
+**Review / QA**
+![Power BI - Review QA](docs/screenshots/reviewqa.jpg)
+
 Live Power BI report: [Payment Ecosystem Analysis](https://app.powerbi.com/groups/me/reports/cfa1efd1-622e-4c11-8ffc-ef918e35c093/2b5cae02a923e4036413?experience=power-bi)
 
 Downloadable copies (no Power BI account needed to view):
